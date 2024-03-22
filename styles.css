@@ -24,7 +24,7 @@ section{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background: url(/assets/Placeholder.jpg) no-repeat;
+  background: url(assets/Placeholder.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 }
