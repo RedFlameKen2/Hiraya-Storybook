@@ -7,6 +7,16 @@
   font-family: "Poppins", sans-serif;
 }
 
+audio::-webkit-media-controls {
+  display: none !important;
+}
+audio::-webkit-media-controls-enclosure {
+  display: none !important;
+}
+audio::-webkit-media-controls-panel {
+  display: none !important;
+}
+
 section{
   position: relative;
   width: 100%;
@@ -14,7 +24,7 @@ section{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background: url(/assets/bg.jpg) no-repeat;
+  background: url(/assets/Placeholder.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -69,7 +79,7 @@ header .navigation a:hover{
 }
 
 .content .info h2{
-  color: #226A80;
+  color: #000000;
   font-size: 55px;
   text-transform: uppercase;
   font-weight: 800;
@@ -79,7 +89,7 @@ header .navigation a:hover{
 }
 
 .content .info h2 span{
-  color: #fff;
+  color: #000000;
   font-size: 50px;
   font-weight: 600;
 }
@@ -92,12 +102,12 @@ header .navigation a:hover{
 
 .content .info-btn{
   color: #fff;
-  background: #226A80;
+  background: #10262d;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 2px;
-  padding: 10px 20px;
+  padding: 10px 20px;   
   border-radius: 5px;
   transition: 0.3s;
   transition-property: background;
@@ -105,29 +115,6 @@ header .navigation a:hover{
 
 .content .info-btn:hover{
   background: #0C4F60;
-}
-
-.media-icons{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-}
-
-.media-icons a{
-  position: relative;
-  color: #111;
-  font-size: 25px;
-  transition: 0.3s;
-  transition-property: transform;
-}
-
-.media-icons a:not(:last-child){
-  margin-right: 60px;
-}
-
-.media-icons a:hover{
-  transform: scale(1.5);
 }
 
 #check{
