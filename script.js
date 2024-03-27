@@ -1,13 +1,10 @@
-
 var pageCount = 1;
-var pages = []
+var pages = [];
 initPages();
 
 function initPages(){
-    pages.add(document.getElementById("page0"));
-    let shifted = pages.shift();
-    const book = document.getElementById("book");
-    book.removeChild(shifted);
+    let firstElement = document.getElementById("page0");
+    pages.push(firstElement);
 }
 function nextPage(){
     if(pageCount >= 3)
@@ -26,6 +23,7 @@ function nextPage(){
 function removePage(){
     let shifted = pages.shift();
     const book = document.getElementById("book");
+    console.log(shifted);
     book.removeChild(shifted);
 
 }
