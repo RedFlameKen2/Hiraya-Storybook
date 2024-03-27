@@ -1,4 +1,5 @@
 var pageCount = 1;
+var madePages = 1;
 var pages = [];
 initPages();
 
@@ -11,21 +12,22 @@ function nextPage(){
 	removePage();
     const book = document.getElementById("book");
     page = document.createElement("img");
-    page.setAttribute("id", "page"+pageCount);
+    page.setAttribute("id", "page"+madePages);
     page.setAttribute("class", "page");
     page.setAttribute("src", getPageImage());
     book.appendChild(page);
     pages.push(page);
-    if(pages < 3)
+    if(pageCount < 3)
 	pageCount++;
+    madePages++;
 }
 
 function removePage(){
     let shifted = pages.shift();
     const book = document.getElementById("book");
-    console.log(shifted);
     book.removeChild(shifted);
 
+    pageCount--;
 }
 
 function getPageImage(){
