@@ -1,20 +1,11 @@
-.book {
+#book {
     background-color: transparent;
-    width: 50%;
+    width: 100%;
     display: flex;
     justify-content: center;
     margin: 0;
 }
-.box {
 
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-
-
-
-}
 .page {
     position: relative;
     width: 100%;
