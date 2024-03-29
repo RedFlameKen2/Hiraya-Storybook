@@ -1,12 +1,13 @@
 #book {
-    background-color: transparent;
-    width: 100%;
+    background-color: black;
     display: flex;
+    justify-content: end;
+    width: 100%;
 }
 
 .page {
     position: relative;
-    width: 100%;
+    width: 325px;
     display: flex;
     justify-content: center;
     margin: 0;
@@ -14,13 +15,14 @@
 
 .pageImg {
     position: relative;
-    width: inherit;
+    width: 100%;
 }
 
 #btnPanel {
     padding: 20px;
     display: flex;
     justify-content: end;
+    width: 100%;
 
 }
 #next {
