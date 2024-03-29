@@ -1,4 +1,5 @@
 #book {
+    position: relative;
     background-color: black;
     display: flex;
     justify-content: end;
@@ -7,7 +8,7 @@
 
 .page {
     position: relative;
-    width: 325px;
+    width: 50%;
     display: flex;
     justify-content: center;
     margin: 0;
