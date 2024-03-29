@@ -2,6 +2,7 @@ var pageCount = 1;
 var madePages = 1;
 var moving = false;
 var translation = 0;
+var rotation = 0;
 var curPage;
 var newPage;
 var pages = [];
@@ -42,7 +43,8 @@ function startPageMoving(){
 }
 
 function moveCurPage(){
-    translation -= 2.083;
+    translation -= 2.0833333333333;
+    rotation += 3.75;
     if(translation <= -100)
 	stopMoving();
 }
@@ -50,12 +52,13 @@ function moveCurPage(){
 function stopMoving(){
     moving = false;
     translation = 0;
+    rotation = 0;
     curPage = newPage;
     if(pageCount >= 3)
 	removePage();
 }
 function drawCurPageTransition(){
-    curPage.style.transform = "translateX("+translation+"%)";
+    curPage.style.transform = "translateX("+translation+"%) rotateY("+rotation+"deg) ";
 }
 function createPage(){
     const book = document.getElementById("book");
