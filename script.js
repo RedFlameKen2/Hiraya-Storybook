@@ -2,7 +2,8 @@ var pageCount = 1;
 var madePages = 1;
 var moving = false;
 var translation = 0;
-var curPage = 0;
+var curPage;
+var newPage;
 var pages = [];
 initPages();
 
@@ -27,8 +28,8 @@ function initPages(){
     curPage = firstElement;
 }
 function nextPage(){
-    moving = true;
-    curPage.style.position = "absolute";
+    if(moving) return;
+    startPageMoving();
     createPage();
     if(pageCount < 3)
 	pageCount++;
@@ -36,13 +37,23 @@ function nextPage(){
 	setTimeout(() => removePage(), 1000);
     madePages++;
 }
+function startPageMoving(){
+    moving = true;
+    curPage.style.position = "absolute";
+    curPage.style.zIndex = "5";
+}
 
 function moveCurPage(){
     translation -= 2.083;
     if(translation <= -100)
-	moving = false;
+	stopMoving();
 }
 
+function stopMoving(){
+    moving = false;
+    translation = 0;
+    curPage = newPage;
+}
 function drawCurPageTransition(){
     curPage.style.transform = "translateX("+translation+"%)";
 }
@@ -58,6 +69,7 @@ function createPage(){
     page.appendChild(pageImage);
 
     book.appendChild(page);
+    newPage = page;
     pages.push(page);
 }
 function removePage(){
