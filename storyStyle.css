@@ -1,9 +1,9 @@
 #book {
     position: relative;
-    background-color: black;
     display: flex;
     justify-content: end;
     width: 100%;
+    perspective: 10000px;
 }
 
 .page {
@@ -12,8 +12,8 @@
     display: flex;
     justify-content: center;
     margin: 0;
-    perspective: 100px;
     transform-style: preserve-3d;
+    border: solid;
     border-color: #808080;
     border-width: 2px;
 }
