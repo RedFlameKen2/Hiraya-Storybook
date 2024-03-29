@@ -33,8 +33,6 @@ function nextPage(){
     createPage();
     if(pageCount < 3)
 	pageCount++;
-    if(pageCount >= 3)
-	setTimeout(() => removePage(), 1000);
     madePages++;
 }
 function startPageMoving(){
@@ -53,6 +51,8 @@ function stopMoving(){
     moving = false;
     translation = 0;
     curPage = newPage;
+    if(pageCount >= 3)
+	removePage();
 }
 function drawCurPageTransition(){
     curPage.style.transform = "translateX("+translation+"%)";
