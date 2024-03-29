@@ -8,21 +8,28 @@ function initPages(){
     pages.push(firstElement);
 }
 function nextPage(){
-    const book = document.getElementById("book");
-    page = document.createElement("img");
-    page.setAttribute("id", "page"+madePages);
-    page.setAttribute("class", "page");
-    page.setAttribute("src", getPageImage());
-    book.appendChild(page);
-    pages.push(page);
+    createPage();
     if(pageCount < 3)
 	pageCount++;
     if(pageCount >= 3)
-	removePage();
-    
+	setTimeout(() => removePage(), 1000);
     madePages++;
 }
 
+function createPage(){
+    const book = document.getElementById("book");
+    page = document.createElement("div");
+    page.setAttribute("id", "page"+madePages);
+    page.setAttribute("class", "page");
+
+    pageImage = document.createElement("img");
+    pageImage.setAttribute("class", "pageImg");
+    pageImage.setAttribute("src", getPageImage());
+    page.appendChild(pageImage);
+
+    book.appendChild(page);
+    pages.push(page);
+}
 function removePage(){
     let shifted = pages.shift();
     const book = document.getElementById("book");
@@ -32,7 +39,5 @@ function removePage(){
 }
 
 function getPageImage(){
-
     return "assets/testPage.png";
-
 }

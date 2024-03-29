@@ -2,15 +2,19 @@
     background-color: transparent;
     width: 100%;
     display: flex;
-    justify-content: center;
-    margin: 0;
 }
 
 .page {
     position: relative;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
 
-
+.pageImg {
+    position: relative;
+    width: inherit;
 }
 
 #btnPanel {
