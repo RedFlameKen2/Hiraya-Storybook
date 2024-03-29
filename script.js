@@ -8,8 +8,6 @@ function initPages(){
     pages.push(firstElement);
 }
 function nextPage(){
-    if(pageCount >= 3)
-	removePage();
     const book = document.getElementById("book");
     page = document.createElement("img");
     page.setAttribute("id", "page"+madePages);
@@ -19,6 +17,9 @@ function nextPage(){
     pages.push(page);
     if(pageCount < 3)
 	pageCount++;
+    if(pageCount >= 3)
+	removePage();
+    
     madePages++;
 }
 
