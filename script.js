@@ -111,7 +111,6 @@ function removePage(){
         pageCount--;
     }
 }
-
 function getPageImage(){
     return "assets/testPage.png";
 }
