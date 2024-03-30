@@ -78,6 +78,10 @@ function stopMoving(){
 	removePage();
 }
 function drawCurPageTransition(){
+    if(curPage == pages[0]){
+	curPage.style.transform = "translate(-50%) rotateY("+rotation+"deg)";
+	return;
+    }
     curPage.style.transform = "rotateY("+rotation+"deg)";
 }
 function createPage(){
