@@ -85,7 +85,7 @@ header .navigation a:hover{
 }
 
 .content .info h2{
-  color: var(--primary-color);
+  color: #462980;
   font-size: 55px;
   text-transform: uppercase;
   font-weight: 800;
