@@ -7,6 +7,11 @@
   font-family: "Poppins", sans-serif;
 }
 
+:root {
+  --primary-color: #462980;
+  --secondary-color: #D1BAFF;
+}
+
 audio::-webkit-media-controls {
   display: none !important;
 }
@@ -80,7 +85,7 @@ header .navigation a:hover{
 }
 
 .content .info h2{
-  color: #462980;
+  color: var(--primary-color);
   font-size: 55px;
   text-transform: uppercase;
   font-weight: 800;
@@ -247,4 +252,3 @@ header .navigation a:hover{
   }
 
 }
-
