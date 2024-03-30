@@ -7,7 +7,7 @@
     position: relative;
     background-color: transparent;
     display: flex;
-    justify-content: end;
+    justify-content: start;
     width: 100%;
     perspective: 1500px;
 }

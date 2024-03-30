@@ -1,6 +1,8 @@
 var pageCount = 1;
-var madePages = 1;
+var pageNumber = 0;
 var moving = false;
+var backflip = false;
+var lastMode = 0;
 var translation = 0;
 var rotation = 0;
 var curPage;
@@ -42,12 +44,36 @@ function initPages(){
 }
 function nextPage(){
     if(moving) return;
+    pageNumber++;
+    if(lastMode == 2)
+	pageNumber++;
+    if(pageCount > 1 && lastMode == 1)
+	curPage = newPage;
     startPageMoving();
     createPage();
     centerBook();
     if(pageCount < 3)
 	pageCount++;
-    madePages++;
+    lastMode = 1;
+}
+function prevPage(){
+    if(pageNumber <= 1){
+	centerPage();
+	return;
+    }
+    if(moving) return;
+    pageNumber--;
+    if(lastMode == 1)
+	pageNumber--;
+    if(lastMode == 2)
+	curPage = newPage;
+    startPageMoving();
+    backflip = true;
+    rotation = -180;
+    createPage();
+    if(pageCount < 3)
+	pageCount++;
+    lastMode = 2;
 }
 function startPageMoving(){
     moving = true;
@@ -59,23 +85,33 @@ function startPageMoving(){
 }
 
 function moveCurPage(){
-    translation -= 2.0833333333333;
-    rotation -= 3.75;
-    if(translation <= -100)
+    if(backflip){
+	translation += 2.0833333333333;
+	rotation += 3.75;
+    } else {
+	translation -= 2.0833333333333;
+	rotation -= 3.75;
+    }
+    if(translation <= -100 || translation >= 100)
 	stopMoving();
 }
 
 function stopMoving(){
     moving = false;
-    translation = 0;
-    rotation = 0;
     curPage.style.width = "50%";
     curPage.childNodes[0].style.width = "100%";
     curPage.style.justifyContent = "center";
-    curPage.style.transform = "translateX(-100%) rotateY(-180deg)";
-    curPage = newPage;
+    if(backflip){
+	curPage.style.transform = "translateX(100%) rotateY(0deg)";
+    } else {
+	curPage.style.transform = "translateX(-100%) rotateY(-180deg)";
+    }
     if(pageCount >= 3)
 	removePage();
+    if(backflip) backflip = false;
+    translation = 0;
+    rotation = 0;
+    
 }
 function drawCurPageTransition(){
     if(curPage == pages[0]){
@@ -86,8 +122,12 @@ function drawCurPageTransition(){
 }
 function createPage(){
     const book = document.getElementById("book");
+    if(backflip)
+	book.style.justifyContent = "start";
+    else
+	book.style.justifyContent = "end";
     page = document.createElement("div");
-    page.setAttribute("id", "page"+madePages);
+    page.setAttribute("id", "page"+pageNumber);
     page.setAttribute("class", "page");
 
     pageImage = document.createElement("img");
@@ -97,19 +137,31 @@ function createPage(){
 
     book.appendChild(page);
     newPage = page;
+    if(backflip){
+	pages.unshift(page);
+	return;
+    }
     pages.push(page);
 }
 function removePage(){
-    if (curPage === pages[0])
-    {
-        centerBook(); // This will center the book back
-        return;
-    } else {
-        let shifted = pages.shift();
-        const book = document.getElementById("book");
-        book.removeChild(shifted);
-        pageCount--;
-    }
+    if(backflip)
+	popPage();
+    else
+	shiftPage();
+}
+function shiftPage(){
+    let shifted = pages.shift();
+    const book = document.getElementById("book");
+    book.removeChild(shifted);
+    console.log("shifted");
+    pageCount--;
+}
+function popPage(){
+    let popped = pages.pop();
+    const book = document.getElementById("book");
+    book.removeChild(popped);
+    console.log("popped");
+    pageCount--;
 }
 function getPageImage(){
     return "assets/testPage.png";
