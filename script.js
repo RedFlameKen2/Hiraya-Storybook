@@ -61,7 +61,7 @@ function startPageMoving(){
 
 function moveCurPage(){
     translation -= 2.0833333333333;
-    rotation += 3.75;
+    rotation -= 3.75;
     if(translation <= -100)
 	stopMoving();
 }
@@ -75,7 +75,7 @@ function stopMoving(){
 	removePage();
 }
 function drawCurPageTransition(){
-    curPage.style.transform = "translateX("+translation+"%) rotateY("+rotation+"deg) ";
+    curPage.style.transform = "translateX("+translation+"%) rotateY("+rotation+"deg)";
 }
 function createPage(){
     const book = document.getElementById("book");
