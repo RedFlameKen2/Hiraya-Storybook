@@ -46,8 +46,6 @@ function initPages(){
 function nextPage(){
     if(moving) return;
     pageNumber++;
-    if(lastMode == 2)
-	pageNumber++;
     if(pageCount > 1 && lastMode == 1)
 	curPage = newPage;
     startPageMoving();
@@ -64,8 +62,6 @@ function prevPage(){
 	return;
     }
     pageNumber--;
-    if(lastMode == 1 && pageNumber < 0)
-	pageNumber--;
     if(lastMode == 2)
 	curPage = newPage;
     startPageMoving();
@@ -77,11 +73,11 @@ function prevPage(){
     lastMode = 2;
 }
 function closeBook(){
-    console.log("bro what");
     bookClosing = true;
     backflip = true;
     rotation = -180;
     lastMode = 0;
+    curPage = newPage;
     startPageMoving();
 }
 
@@ -141,7 +137,9 @@ function createPage(){
     else
 	book.style.justifyContent = "end";
     page = document.createElement("div");
-    page.setAttribute("id", "page"+pageNumber);
+    let prevInc = 0;
+    if(backflip) prevInc = 1;
+    page.setAttribute("id", "page"+(pageNumber-prevInc));
     page.setAttribute("class", "page");
 
     pageImage = document.createElement("img");
