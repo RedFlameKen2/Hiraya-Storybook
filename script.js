@@ -76,8 +76,8 @@ function closeBook(){
     bookClosing = true;
     backflip = true;
     rotation = -180;
-    lastMode = 0;
-    curPage = newPage;
+    if(lastMode == 2)
+	curPage = newPage;
     startPageMoving();
 }
 
@@ -124,11 +124,15 @@ function stopMoving(){
     }
 }
 function drawCurPageTransition(){
-    if(curPage == pages[0]){
+    if(bookClosing && lastMode == 1){
 	curPage.style.transform = "translate(-50%) rotateY("+rotation+"deg)";
 	return;
     }
-    curPage.style.transform = "rotateY("+rotation+"deg)";
+    if(bookClosing || curPage != pages[0]){
+	curPage.style.transform = "rotateY("+rotation+"deg)";
+	return;
+    }
+    curPage.style.transform = "translate(-50%) rotateY("+rotation+"deg)";
 }
 function createPage(){
     const book = document.getElementById("book");
