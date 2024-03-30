@@ -23,18 +23,35 @@ function runLoop(){
     draw();
     window.requestAnimationFrame(runLoop);
 }
+
+function centerBook(){
+       // Only center the first page if it's the current page
+       if (curPage === pages[0]) {
+        curPage.style.position = 'absolute';
+        curPage.style.left = '50%';
+        curPage.style.transform = 'translateX(-50%)';
+    }
+}
+
 function initPages(){
     let firstElement = document.getElementById("page0");
     pages.push(firstElement);
     curPage = firstElement;
+    centerBook();
 }
 function nextPage(){
     if(moving) return;
     startPageMoving();
     createPage();
+    centerBook();
     if(pageCount < 3)
 	pageCount++;
     madePages++;
+    if (curPage !== pages[0]) {
+         // Put the rest at the end
+        curPage.style.position = 'absolute';
+        curPage.style.right = '0';
+     }
 }
 function startPageMoving(){
     moving = true;
@@ -76,11 +93,16 @@ function createPage(){
     pages.push(page);
 }
 function removePage(){
-    let shifted = pages.shift();
-    const book = document.getElementById("book");
-    book.removeChild(shifted);
-
-    pageCount--;
+    if (curPage === pages[0])
+    {
+        centerBook(); // This will center the book back
+        return;
+    } else {
+        let shifted = pages.shift();
+        const book = document.getElementById("book");
+        book.removeChild(shifted);
+        pageCount--;
+    }
 }
 
 function getPageImage(){
