@@ -27,7 +27,7 @@ function runLoop(){
 
 function centerBook(){
        // Only center the first page if it's the current page
-       if (curPage === pages[0]) {
+    if (curPage === pages[0]) {
         curPage.style.position = 'absolute';
         curPage.style.left = '50%';
         curPage.style.transform = 'translateX(-50%)';
@@ -48,11 +48,6 @@ function nextPage(){
     if(pageCount < 3)
 	pageCount++;
     madePages++;
-    if (curPage !== pages[0]) {
-         // Put the rest at the end
-        curPage.style.position = 'absolute';
-        curPage.style.right = '0';
-     }
 }
 function startPageMoving(){
     moving = true;
@@ -74,6 +69,10 @@ function stopMoving(){
     moving = false;
     translation = 0;
     rotation = 0;
+    curPage.style.width = "50%";
+    curPage.childNodes[0].style.width = "100%";
+    curPage.style.justifyContent = "center";
+    curPage.style.transform = "translateX(-100%) rotateY(-180deg)";
     curPage = newPage;
     if(pageCount >= 3)
 	removePage();
