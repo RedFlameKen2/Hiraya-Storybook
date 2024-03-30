@@ -148,7 +148,7 @@ function createPage(){
 
     pageImage = document.createElement("img");
     pageImage.setAttribute("class", "pageImg");
-    pageImage.setAttribute("src", getPageImage());
+    pageImage.setAttribute("src", getPageImage(prevInc));
     page.appendChild(pageImage);
 
     book.appendChild(page);
@@ -182,10 +182,10 @@ function popPage(){
     book.removeChild(popped);
     console.log("popped");
 }
-function getPageImage(){
-    switch(pageNumber){
+function getPageImage(prevInc){
+    switch(pageNumber-prevInc){
 	case 0:
-	    return "assets/testPage.png";
+	    return "assets/Cover.svg";
 	case 1:
 	    return "assets/testPage.png";
 	case 2:
