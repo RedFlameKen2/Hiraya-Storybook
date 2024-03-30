@@ -54,12 +54,15 @@
 
 @media (max-width: 960px) {
     #next, #remove {
-        font-size: 1.5vw; /* Adjust as needed */
+        font-size: 2vw; /* Adjust as needed */
+        padding: 0.8rem 1.6 rem;
     }
 }
 
 @media (max-width: 560px) {
     #next, #remove {
-        font-size: 0.8vw; /* Adjust as needed */
+        font-size: 1.5vw; /* Adjust as needed */
+        padding: 0.6rem 1.2rem;
     }
 }
+
