@@ -6,6 +6,7 @@ var rotation = 0;
 var curPage;
 var newPage;
 var pages = [];
+
 initPages();
 
 window.requestAnimationFrame(runLoop);
@@ -56,6 +57,9 @@ function nextPage(){
 function startPageMoving(){
     moving = true;
     curPage.style.position = "absolute";
+    curPage.style.width = "100%";
+    curPage.childNodes[0].style.width = "50%";
+    curPage.style.justifyContent = "end";
     curPage.style.zIndex = "5";
 }
 
@@ -75,7 +79,7 @@ function stopMoving(){
 	removePage();
 }
 function drawCurPageTransition(){
-    curPage.style.transform = "translateX("+translation+"%) rotateY("+rotation+"deg)";
+    curPage.style.transform = "rotateY("+rotation+"deg)";
 }
 function createPage(){
     const book = document.getElementById("book");
