@@ -17,13 +17,21 @@
     <section>
       <input type="checkbox" id="check">
       <header>
-        </div>
         <h2><a href="index.html" class="logo"><img src="assets/Logo.svg"></a></h2>
         <div class="navigation">
           <a href="index.html">Home</a>
-          <a href="#">About</a>
+          <!-- Not yet Made -->
+          <a href="about.html">About</a>
+          <div class="dropdown">
+            <a href="#">Languages</a>
+            <div class="dropdown-content">
+              <button onclick="changeFiloLang()">Filipino</button>
+              <button onclick="changeEngLang()">English</button>
+            </div>
+          </div>
         </div>
         <label for="check">
+          <!-- These icons are from all.min.css -->
         <i class="fas fa-bars menu-btn"></i>
         <i class="fas fa-times close-btn"></i>
         </label>
