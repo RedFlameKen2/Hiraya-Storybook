@@ -3,7 +3,6 @@ var pageNumber = 0;
 var moving = false;
 var backflip = false;
 var lastMode = 0;
-var bookClosing = false;
 var translation = 0;
 var rotation = 0;
 var curPage;
@@ -58,13 +57,9 @@ function nextPage(){
     lastMode = 1;
 }
 function prevPage(){
-    if(moving || pageNumber == 0) return;
-    if(pageNumber == 1 && pageCount == 2){
-	closeBook();
-	return;
-    }
+    if(moving) return;
     pageNumber--;
-    if(lastMode == 1 && pageNumber < 0)
+    if(lastMode == 1)
 	pageNumber--;
     if(lastMode == 2)
 	curPage = newPage;
@@ -76,15 +71,6 @@ function prevPage(){
 	pageCount++;
     lastMode = 2;
 }
-function closeBook(){
-    console.log("bro what");
-    bookClosing = true;
-    backflip = true;
-    rotation = -180;
-    lastMode = 0;
-    startPageMoving();
-}
-
 function startPageMoving(){
     moving = true;
     curPage.style.position = "absolute";
@@ -116,16 +102,12 @@ function stopMoving(){
     } else {
 	curPage.style.transform = "translateX(-100%) rotateY(-180deg)";
     }
-    if(pageCount >= 3 || bookClosing)
+    if(pageCount >= 3)
 	removePage();
     if(backflip) backflip = false;
     translation = 0;
     rotation = 0;
-    if(bookClosing){
-	pageNumber = 0;
-	bookClosing = false;
-	centerBook();
-    }
+    
 }
 function drawCurPageTransition(){
     if(curPage == pages[0]){
@@ -162,23 +144,20 @@ function removePage(){
 	popPage();
     else
 	shiftPage();
-    if(bookClosing){
-	pageCount = 1;
-	return;
-    }
-    pageCount--;
 }
 function shiftPage(){
     let shifted = pages.shift();
     const book = document.getElementById("book");
     book.removeChild(shifted);
     console.log("shifted");
+    pageCount--;
 }
 function popPage(){
     let popped = pages.pop();
     const book = document.getElementById("book");
     book.removeChild(popped);
     console.log("popped");
+    pageCount--;
 }
 function getPageImage(){
     switch(pageNumber){
