@@ -164,5 +164,45 @@ function popPage(){
     pageCount--;
 }
 function getPageImage(){
+    switch(pageNumber){
+	case 0:
+	    return "assets/PlaceHolder.jpg";
+	case 1:
+	    return "assets/testPage.png";
+	case 2:
+	    return "assets/testPage.png";
+	case 3:
+	    return "assets/testPage.png";
+	case 4:
+	    return "assets/testPage.png";
+	case 5:
+	    return "assets/testPage.png";
+	case 6:
+	    return "assets/testPage.png";
+	case 7:
+	    return "assets/testPage.png";
+	case 8:
+	    return "assets/testPage.png";
+	case 9:
+	    return "assets/testPage.png";
+	case 10:
+	    return "assets/testPage.png";
+	case 11:
+	    return "assets/testPage.png";
+	case 12:
+	    return "assets/testPage.png";
+	case 13:
+	    return "assets/testPage.png";
+	case 14:
+	    return "assets/testPage.png";
+	case 15:
+	    return "assets/testPage.png";
+	case 16:
+	    return "assets/testPage.png";
+	case 17:
+	    return "assets/testPage.png";
+	case 18:
+	    return "assets/testPage.png";
+    }
     return "assets/testPage.png";
 }
