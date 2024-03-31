@@ -10,6 +10,8 @@ var curPage;
 var newPage;
 var pages = [];
 
+iosMusic();
+
 initPages();
 
 window.requestAnimationFrame(runLoop);
@@ -381,4 +383,10 @@ function debugFunc(){
     console.log("backflip: "+backflip);
     console.log("curPage: "+curPage);
     console.log("newPage: "+newPage);
+}
+function iosMusic(){
+    let audio = new Audio();
+    audio.src = "assets/Hiraya_bg_music.wav";
+    audio.type = "x-wav";
+    audio.play();
 }
