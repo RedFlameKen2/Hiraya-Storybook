@@ -17,6 +17,11 @@ window.requestAnimationFrame(runLoop);
 function update(){
     if(moving)
 	moveCurPage();
+    if((translation <= 51 && translation >= 49) || (translation >= -51 && translation <= -49))
+	changeImage();
+    if(translation <= -100 || translation >= 100)
+	stopMoving();
+
 }
 function draw(){
     if(moving)
@@ -98,8 +103,6 @@ function moveCurPage(){
 	translation -= 2.0833333333333;
 	rotation -= 3.75;
     }
-    if(translation <= -100 || translation >= 100)
-	stopMoving();
 }
 
 function stopMoving(){
@@ -183,6 +186,96 @@ function popPage(){
     let popped = pages.pop();
     const book = document.getElementById("book");
     book.removeChild(popped);
+}
+function changeImage(){
+    let pageSrc;
+    let pageNo = pageNumber;
+    if(backflip){
+	pageNo++; 
+	switch(pageNo){
+	    case 0:
+		pageSrc = "assets/textPage.png";
+	    case 1:
+		pageSrc = "assets/textPage.png";
+	    case 2:
+		pageSrc = "assets/textPage.png";
+	    case 3:
+		pageSrc = "assets/textPage.png";
+	    case 4:
+		pageSrc = "assets/textPage.png";
+	    case 5:
+		pageSrc = "assets/textPage.png";
+	    case 6:
+		pageSrc = "assets/textPage.png";
+	    case 7:
+		pageSrc = "assets/textPage.png";
+	    case 8:
+		pageSrc = "assets/textPage.png";
+	    case 9:
+		pageSrc = "assets/textPage.png";
+	    case 10:
+		pageSrc = "assets/textPage.png";
+	    case 11:    
+		pageSrc = "assets/textPage.png";
+	    case 12:
+		pageSrc = "assets/textPage.png";
+	    case 13:
+		pageSrc = "assets/textPage.png";
+	    case 14:
+		pageSrc = "assets/textPage.png";
+	    case 15:
+		pageSrc = "assets/textPage.png";
+	    case 16:
+		pageSrc = "assets/textPage.png";
+	    case 17:
+		pageSrc = "assets/textPage.png";
+	    case 18:
+		pageSrc = "assets/textPage.png";
+	}
+    } else {
+	pageNo--;
+	switch(pageNo){
+	    case 0:
+		pageSrc = "assets/testPage.png";
+	    case 1:
+		pageSrc = "assets/testPage.png";
+	    case 2:
+		pageSrc = "assets/testPage.png";
+	    case 3:
+		pageSrc = "assets/testPage.png";
+	    case 4:
+		pageSrc = "assets/testPage.png";
+	    case 5:
+		pageSrc = "assets/testPage.png";
+	    case 6:
+		pageSrc = "assets/testPage.png";
+	    case 7:
+		pageSrc = "assets/testPage.png";
+	    case 8:
+		pageSrc = "assets/testPage.png";
+	    case 9:
+		pageSrc = "assets/testPage.png";
+	    case 10:
+		pageSrc = "assets/testPage.png";
+	    case 11:    
+		pageSrc = "assets/testPage.png";
+	    case 12:
+		pageSrc = "assets/testPage.png";
+	    case 13:
+		pageSrc = "assets/testPage.png";
+	    case 14:
+		pageSrc = "assets/testPage.png";
+	    case 15:
+		pageSrc = "assets/testPage.png";
+	    case 16:
+		pageSrc = "assets/testPage.png";
+	    case 17:
+		pageSrc = "assets/testPage.png";
+	    case 18:
+		pageSrc = "assets/testPage.png";
+	}
+    }
+    curPage.childNodes[0].setAttribute("src", pageSrc);
 }
 function getPageImage(prevInc){
     if(backflip){
