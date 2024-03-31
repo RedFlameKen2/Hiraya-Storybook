@@ -392,18 +392,3 @@ function playMusic() {
 		audio.play();
 	}
 }
-
-document.addEventListener('paste', function(event) {
-    var pastedText = (event.clipboardData || window.clipboardData).getData('text');
-    // Check if pasted text is a URL
-    if (isURL(pastedText)) {
-        // Apply background photo
-        document.body.style.backgroundImage = 'url(' + pastedText + ')';
-        document.body.style.backgroundSize = 'cover';
-    }
-});
-
-function isURL(text) {
-    var urlPattern = /^(https?:\/\/)?([a-z0-9-]+\.)+[a-z]{2,}(\/\S*)?$/i;
-    return urlPattern.test(text);
-}
