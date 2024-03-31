@@ -125,21 +125,28 @@ function stopMoving(){
 }
 function drawCurPageTransition(){
     if(bookClosing && lastMode == 1){
+	console.log("bookClosing && lastMode == 1");
 	curPage.style.transform = "translate(-50%) rotateY("+rotation+"deg)";
 	return;
     }
     if(bookClosing || curPage != pages[0]){
+	console.log("bookClosing || curPage != pages[0]");
 	curPage.style.transform = "rotateY("+rotation+"deg)";
 	return;
     }
+    console.log("default");
     curPage.style.transform = "translate(-50%) rotateY("+rotation+"deg)";
 }
 function createPage(){
     const book = document.getElementById("book");
-    if(backflip)
+    if(backflip){
 	book.style.justifyContent = "start";
-    else
+	book.style.flexDirection = "row-reverse";
+    }
+    else{
 	book.style.justifyContent = "end";
+	book.style.flexDirection = "row";
+    }
     page = document.createElement("div");
     let prevInc = 0;
     if(backflip) prevInc = 1;
@@ -174,13 +181,11 @@ function shiftPage(){
     let shifted = pages.shift();
     const book = document.getElementById("book");
     book.removeChild(shifted);
-    console.log("shifted");
 }
 function popPage(){
     let popped = pages.pop();
     const book = document.getElementById("book");
     book.removeChild(popped);
-    console.log("popped");
 }
 function getPageImage(prevInc){
     switch(pageNumber-prevInc){
@@ -191,19 +196,19 @@ function getPageImage(prevInc){
 	case 2:
 	    return "assets/testPage.png";
 	case 3:
-	    return "assets/testPage.png";
+	    return "assets/Cover.svg";
 	case 4:
 	    return "assets/testPage.png";
 	case 5:
-	    return "assets/testPage.png";
+	    return "assets/Cover.svg";
 	case 6:
 	    return "assets/testPage.png";
 	case 7:
-	    return "assets/testPage.png";
+	    return "assets/Cover.svg";
 	case 8:
 	    return "assets/testPage.png";
 	case 9:
-	    return "assets/testPage.png";
+	    return "assets/Cover.svg";
 	case 10:
 	    return "assets/testPage.png";
 	case 11:    
