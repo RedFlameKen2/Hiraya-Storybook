@@ -262,22 +262,22 @@ function changeImage(){
 		pageSrc = "assets/Intro/intro1.png";
 		break;
 	    case 1:
-		pageSrc = "assets/testPage.png";
+		pageSrc = "assets/Intro/intro2.png";
 		break;
 	    case 2:
-		pageSrc = "assets/testPage.png";
+		pageSrc = "assets/Intro/intro3.png";
 		break;
 	    case 3:
-		pageSrc = "assets/testPage.png";
+		pageSrc = "assets/Intro/intro4.png";
 		break;
 	    case 4:
-		pageSrc = "assets/testPage.png";
+		pageSrc = "assets/Intro/intro5.png";
 		break;
 	    case 5:
-		pageSrc = "assets/testPage.png";
+		pageSrc = "assets/Intro/intro6.png";
 		break;
 	    case 6:
-		pageSrc = "assets/testPage.png";
+		pageSrc = "assets/Intro/intro7.png";
 		break;
 	    case 7:
 		pageSrc = "assets/testPage.png";
@@ -332,17 +332,17 @@ function getPageImage(prevInc){
 	case 0:
 	    return "assets/Intro/intro1.png";
 	case 1:
-	    return "assets/testPage.png";
+	    return "assets/Intro/intro2.png";
 	case 2:
-	    return "assets/testPage.png";
+	    return "assets/Intro/intro3.png";
 	case 3:
-	    return "assets/testPage.png";
+	    return "assets/Intro/intro4.png";
 	case 4:
-	    return "assets/testPage.png";
+	    return "assets/Intro/intro5.png";
 	case 5:
-	    return "assets/testPage.png";
+	    return "assets/Intro/intro6.png";
 	case 6:
-	    return "assets/testPage.png";
+	    return "assets/Intro/intro7.png";
 	case 7:
 	    return "assets/testPage.png";
 	case 8:
