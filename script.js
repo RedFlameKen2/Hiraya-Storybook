@@ -69,9 +69,9 @@ function prevPage(){
     pageNumber--;
     if(lastMode == 2)
 	curPage = newPage;
-    startPageMoving();
     backflip = true;
-    rotation = -180;
+    rotation = 0;
+    startPageMoving();
     createPage();
     if(pageCount < 3)
 	pageCount++;
@@ -80,7 +80,7 @@ function prevPage(){
 function closeBook(){
     bookClosing = true;
     backflip = true;
-    rotation = -180;
+    rotation = 0;
     if(lastMode == 2)
 	curPage = newPage;
     startPageMoving();
@@ -91,7 +91,10 @@ function startPageMoving(){
     curPage.style.position = "absolute";
     curPage.style.width = "100%";
     curPage.childNodes[0].style.width = "50%";
-    curPage.style.justifyContent = "end";
+    if(backflip)
+	curPage.style.justifyContent = "start";
+    else
+	curPage.style.justifyContent = "end";
     curPage.style.zIndex = "5";
 }
 
@@ -113,7 +116,7 @@ function stopMoving(){
     if(backflip){
 	curPage.style.transform = "translateX(100%) rotateY(0deg)";
     } else {
-	curPage.style.transform = "translateX(-100%) rotateY(-180deg)";
+	curPage.style.transform = "translateX(-100%) rotateY(0deg)";
     }
     if(pageCount >= 3 || bookClosing)
 	removePage();
@@ -244,7 +247,7 @@ function changeImage(){
 	    case 3:
 		pageSrc = "assets/testPage.png";
 	    case 4:
-		pageSrc = "assets/testPage.png";
+		pageSrc = "assets/Cover.svg";
 	    case 5:
 		pageSrc = "assets/testPage.png";
 	    case 6:
@@ -275,6 +278,13 @@ function changeImage(){
 		pageSrc = "assets/testPage.png";
 	}
     }
+    if(bookClosing)
+	pageSrc = "assets/Cover.svg";
+    rotation -= 180;
+    if(backflip)
+	curPage.style.justifyContent = "end";
+    else
+	curPage.style.justifyContent = "start";
     curPage.childNodes[0].setAttribute("src", pageSrc);
 }
 function getPageImage(prevInc){
