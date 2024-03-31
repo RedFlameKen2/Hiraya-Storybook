@@ -385,6 +385,6 @@ function debugFunc(){
 }
 
 function playMusic () {
-	var audio = new Audio('assets/Hiraya_bg_music.wav'); // Replace 'audio.mp3' with the path to your audio file
+	var audio = new Audio('assets/Hiraya_bg_music.wav');
       audio.play();
 }
