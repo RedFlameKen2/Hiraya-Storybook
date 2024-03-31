@@ -247,7 +247,7 @@ function changeImage(){
 	    case 3:
 		pageSrc = "assets/testPage.png";
 	    case 4:
-		pageSrc = "assets/Cover.svg";
+		pageSrc = "assets/testPage.png";
 	    case 5:
 		pageSrc = "assets/testPage.png";
 	    case 6:
