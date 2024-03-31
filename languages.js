@@ -16,4 +16,3 @@ function changeEngLang () {
     tagalogLandingPageBtn.innerHTML = "Start Reading!";
     tagalogLandingPageHeader.innerHTML = "The story is about Hiraya's experiences using the help of a magical hat. Because of Hiraya's sadness about her lack of a dream profession, she asked for advice from her grandfather who told her to find her hat. When Hiraya found it, she discovered that it was actually a magical hat. With the help of the hat, Hiraya experienced various professions. After her journey, she realized that no matter what dream career she chooses, the important parts of herself will never disappear.";
 }
-

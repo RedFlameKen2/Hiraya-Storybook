@@ -45,6 +45,11 @@
     transition: 0.3s;
     transition-property: background, color; /* Add color to transition properties */
     cursor: pointer;
+    border: 1px solid black;
+}
+
+#remove {
+    margin-right: 1rem;
 }
 
 #remove:hover, #next:hover {

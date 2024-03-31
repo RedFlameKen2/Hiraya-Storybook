@@ -10,7 +10,6 @@ var curPage;
 var newPage;
 var pages = [];
 
-iosMusic();
 
 initPages();
 
@@ -384,9 +383,8 @@ function debugFunc(){
     console.log("curPage: "+curPage);
     console.log("newPage: "+newPage);
 }
-function iosMusic(){
-    let audio = new Audio();
-    audio.src = "assets/Hiraya_bg_music.wav";
-    audio.type = "x-wav";
-    audio.play();
+
+function playMusic () {
+	var audio = new Audio('assets/Hiraya_bg_music.wav'); // Replace 'audio.mp3' with the path to your audio file
+      audio.play();
 }
