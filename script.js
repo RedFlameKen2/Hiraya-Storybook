@@ -384,7 +384,11 @@ function debugFunc(){
     console.log("newPage: "+newPage);
 }
 
-function playMusic () {
-	var audio = new Audio('assets/Hiraya_bg_music.wav');
-      audio.play();
+var audio = new Audio('assets/Hiraya_bg_music.wav');
+audio.loop = true;
+
+function playMusic() {
+	if (audio.paused) {
+		audio.play();
+	}
 }
