@@ -125,16 +125,13 @@ function stopMoving(){
 }
 function drawCurPageTransition(){
     if(bookClosing && lastMode == 1){
-	console.log("bookClosing && lastMode == 1");
 	curPage.style.transform = "translate(-50%) rotateY("+rotation+"deg)";
 	return;
     }
     if(bookClosing || curPage != pages[0]){
-	console.log("bookClosing || curPage != pages[0]");
 	curPage.style.transform = "rotateY("+rotation+"deg)";
 	return;
     }
-    console.log("default");
     curPage.style.transform = "translate(-50%) rotateY("+rotation+"deg)";
 }
 function createPage(){
@@ -188,27 +185,28 @@ function popPage(){
     book.removeChild(popped);
 }
 function getPageImage(prevInc){
-    switch(pageNumber-prevInc){
+    if(backflip){
+	switch(pageNumber-prevInc){
 	case 0:
-	    return "assets/Cover.svg";
+	    return "assets/testPage.png";
 	case 1:
 	    return "assets/testPage.png";
 	case 2:
 	    return "assets/testPage.png";
 	case 3:
-	    return "assets/Cover.svg";
+	    return "assets/testPage.png";
 	case 4:
 	    return "assets/testPage.png";
 	case 5:
-	    return "assets/Cover.svg";
+	    return "assets/testPage.png";
 	case 6:
 	    return "assets/testPage.png";
 	case 7:
-	    return "assets/Cover.svg";
+	    return "assets/testPage.png";
 	case 8:
 	    return "assets/testPage.png";
 	case 9:
-	    return "assets/Cover.svg";
+	    return "assets/testPage.png";
 	case 10:
 	    return "assets/testPage.png";
 	case 11:    
@@ -227,6 +225,48 @@ function getPageImage(prevInc){
 	    return "assets/testPage.png";
 	case 18:
 	    return "assets/testPage.png";
+
+	}
+    }
+    switch(pageNumber-prevInc){
+	case 0:
+	    return "assets/textPage.png";
+	case 1:
+	    return "assets/textPage.png";
+	case 2:
+	    return "assets/textPage.png";
+	case 3:
+	    return "assets/textPage.png";
+	case 4:
+	    return "assets/textPage.png";
+	case 5:
+	    return "assets/textPage.png";
+	case 6:
+	    return "assets/textPage.png";
+	case 7:
+	    return "assets/textPage.png";
+	case 8:
+	    return "assets/textPage.png";
+	case 9:
+	    return "assets/textPage.png";
+	case 10:
+	    return "assets/textPage.png";
+	case 11:    
+	    return "assets/textPage.png";
+	case 12:
+	    return "assets/textPage.png";
+	case 13:
+	    return "assets/textPage.png";
+	case 14:
+	    return "assets/textPage.png";
+	case 15:
+	    return "assets/textPage.png";
+	case 16:
+	    return "assets/textPage.png";
+	case 17:
+	    return "assets/textPage.png";
+	case 18:
+	    return "assets/textPage.png";
     }
     return "assets/testPage.png";
 }
