@@ -199,84 +199,122 @@ function changeImage(){
 	switch(pageNo){
 	    case 0:
 		pageSrc = "assets/textPage.png";
+		break;
 	    case 1:
 		pageSrc = "assets/textPage.png";
+		break;
 	    case 2:
 		pageSrc = "assets/textPage.png";
+		break;
 	    case 3:
 		pageSrc = "assets/textPage.png";
+		break;
 	    case 4:
 		pageSrc = "assets/textPage.png";
+		break;
 	    case 5:
 		pageSrc = "assets/textPage.png";
+		break;
 	    case 6:
 		pageSrc = "assets/textPage.png";
+		break;
 	    case 7:
 		pageSrc = "assets/textPage.png";
+		break;
 	    case 8:
 		pageSrc = "assets/textPage.png";
+		break;
 	    case 9:
 		pageSrc = "assets/textPage.png";
+		break;
 	    case 10:
 		pageSrc = "assets/textPage.png";
+		break;
 	    case 11:    
 		pageSrc = "assets/textPage.png";
+		break;
 	    case 12:
 		pageSrc = "assets/textPage.png";
+		break;
 	    case 13:
 		pageSrc = "assets/textPage.png";
+		break;
 	    case 14:
 		pageSrc = "assets/textPage.png";
+		break;
 	    case 15:
 		pageSrc = "assets/textPage.png";
+		break;
 	    case 16:
 		pageSrc = "assets/textPage.png";
+		break;
 	    case 17:
 		pageSrc = "assets/textPage.png";
+		break;
 	    case 18:
 		pageSrc = "assets/textPage.png";
+		break;
 	}
     } else {
 	pageNo--;
 	switch(pageNo){
 	    case 0:
-		pageSrc = "assets/testPage.png";
+		pageSrc = "assets/Intro/intro1.png";
+		break;
 	    case 1:
 		pageSrc = "assets/testPage.png";
+		break;
 	    case 2:
 		pageSrc = "assets/testPage.png";
+		break;
 	    case 3:
 		pageSrc = "assets/testPage.png";
+		break;
 	    case 4:
 		pageSrc = "assets/testPage.png";
+		break;
 	    case 5:
 		pageSrc = "assets/testPage.png";
+		break;
 	    case 6:
 		pageSrc = "assets/testPage.png";
+		break;
 	    case 7:
 		pageSrc = "assets/testPage.png";
+		break;
 	    case 8:
 		pageSrc = "assets/testPage.png";
+		break;
 	    case 9:
 		pageSrc = "assets/testPage.png";
+		break;
 	    case 10:
 		pageSrc = "assets/testPage.png";
+		break;
 	    case 11:    
 		pageSrc = "assets/testPage.png";
+		break;
 	    case 12:
 		pageSrc = "assets/testPage.png";
+		break;
 	    case 13:
 		pageSrc = "assets/testPage.png";
+		break;
 	    case 14:
 		pageSrc = "assets/testPage.png";
+		break;
 	    case 15:
 		pageSrc = "assets/testPage.png";
+		break;
 	    case 16:
 		pageSrc = "assets/testPage.png";
+		break;
 	    case 17:
 		pageSrc = "assets/testPage.png";
+		break;
 	    case 18:
 		pageSrc = "assets/testPage.png";
+		break;
 	}
     }
     if(bookClosing)
@@ -292,7 +330,7 @@ function getPageImage(prevInc){
     if(backflip){
 	switch(pageNumber-prevInc){
 	case 0:
-	    return "assets/testPage.png";
+	    return "assets/Intro/intro1.png";
 	case 1:
 	    return "assets/testPage.png";
 	case 2:
@@ -372,7 +410,6 @@ function getPageImage(prevInc){
 	case 18:
 	    return "assets/textPage.png";
     }
-    return "assets/testPage.png";
 }
 
 function debugFunc(){
