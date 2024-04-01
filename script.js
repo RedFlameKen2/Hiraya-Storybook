@@ -224,7 +224,7 @@ function removePage(){
 	pageCount = 1;
 	return;
     }
-    pageCount--;
+    pageCount--;	
 }
 function shiftPage(){
     let shifted = pages.shift();
@@ -240,6 +240,7 @@ function changeImage(){
     let pageSrc;
     let pageNo = pageNumber;
     if(backflip){
+		// Right side of the Page
 	switch(pageNo){
 	    case 1:
 		pageSrc = "assets/Intro/panel1.png";
@@ -248,13 +249,13 @@ function changeImage(){
 		pageSrc = "assets/Intro/panel2.png";
 		break;
 	    case 3:
-		pageSrc = "assets/textPage.png";
+		pageSrc = "assets/Intro/panel3.png";
 		break;
 	    case 4:
 		pageSrc = "assets/Intro/panel4.png";
 		break;
 	    case 5:
-		pageSrc = "assets/textPage.png";
+		pageSrc = "assets/Intro/panel5.png";
 		break;
 	    case 6:
 		pageSrc = "assets/Intro/panel6.png";
@@ -284,35 +285,61 @@ function changeImage(){
 		pageSrc = "assets/Exposition/Panel7.png";
 		break;
 	    case 15:
-		pageSrc = "assets/textPage.png";
+		pageSrc = "assets/Rising_Action/TRAC1.png";
 		break;
 	    case 16:
-		pageSrc = "assets/textPage.png";
+		pageSrc = "assets/Rising_Action/TRAC2.png";
 		break;
 	    case 17:
-		pageSrc = "assets/textPage.png";
+		pageSrc = "assets/Rising_Action/TRAC3.png";
 		break;
 	    case 18:
+		pageSrc = "assets/Rising_Action/TRAC4.png";
+		break;
+		case 19:
+		pageSrc = "assets/textPage.png";
+		break;
+	    case 20:
+		pageSrc = "assets/textPage.png";
+		break;
+	    case 21:
+		pageSrc = "assets/textPage.png";
+		break;
+	    case 22:
+		pageSrc = "assets/textPage.png";
+		break;
+	    case 23:
+		pageSrc = "assets/textPage.png";
+		break;
+		case 24:
+		pageSrc = "assets/textPage.png";
+		break;
+	    case 25:
+		pageSrc = "assets/textPage.png";
+		break;
+	    case 26:
 		pageSrc = "assets/textPage.png";
 		break;
 	}
     } else {
 	pageNo--;
 	switch(pageNo){
+		// Left Side of the Page
 	    case 0:
+			// Intro Part
 		pageSrc = "assets/Intro/intro1.png";
 		break;
 	    case 1:
 		pageSrc = "assets/Intro/intro2.png";
 		break;
 	    case 2:
-		pageSrc = "assets/Intro/intro3.png";
+		pageSrc = "assets/Intro/intro3.0.png";
 		break;
 	    case 3:
 		pageSrc = "assets/Intro/intro4.png";
 		break;
 	    case 4:
-		pageSrc = "assets/Intro/intro5.png";
+		pageSrc = "assets/Intro/intro5.1.png";
 		break;
 	    case 5:
 		pageSrc = "assets/Intro/intro6.png";
@@ -321,6 +348,7 @@ function changeImage(){
 		pageSrc = "assets/Intro/intro7.png";
 		break;
 	    case 7:
+			// Exposition Part
 		pageSrc = "assets/Exposition/E1.png";
 		break;
 	    case 8:
@@ -336,24 +364,46 @@ function changeImage(){
 		pageSrc = "assets/Exposition/E5.png";
 		break;
 	    case 12:
+			// Rising Action Part
 		pageSrc = "assets/Exposition/E6.png";
 		break;
 	    case 13:
 		pageSrc = "assets/Exposition/E7.png";
 		break;
 	    case 14:
-		pageSrc = "assets/testPage.png";
+		pageSrc = "assets/Rising_Action/RAC1.png";
 		break;
 	    case 15:
-		pageSrc = "assets/testPage.png";
+		pageSrc = "assets/Rising_Action/RAC2.png";
 		break;
 	    case 16:
-		pageSrc = "assets/testPage.png";
+		pageSrc = "assets/Rising_Action/RAC3.png";
 		break;
 	    case 17:
-		pageSrc = "assets/testPage.png";
+		pageSrc = "assets/Rising_Action/RAC4.png";
 		break;
 	    case 18:
+		pageSrc = "assets/testPage.png";
+		break;
+		case 19:
+		pageSrc = "assets/testPage.png";
+		break;
+	    case 20:
+		pageSrc = "assets/testPage.png";
+		break;
+	    case 21:
+		pageSrc = "assets/testPage.png";
+		break;
+		case 23:
+		pageSrc = "assets/testPage.png";
+		break;
+	    case 24:
+		pageSrc = "assets/testPage.png";
+		break;
+	    case 25:
+		pageSrc = "assets/testPage.png";
+		break;
+		case 26:
 		pageSrc = "assets/testPage.png";
 		break;
 	}
@@ -370,21 +420,24 @@ function changeImage(){
 function getPageImage(prevInc){
     if(backflip){
 	switch(pageNumber-prevInc){
+		// Left side of the Page
 	case 0:
+		// Intro Part
 	    return "assets/Intro/intro1.png";
 	case 1:
 	    return "assets/Intro/intro2.png";
 	case 2:
-	    return "assets/Intro/intro3.png";
+	    return "assets/Intro/intro3.0.png";
 	case 3:
 	    return "assets/Intro/intro4.png";
 	case 4:
-	    return "assets/Intro/intro5.png";
+	    return "assets/Intro/intro5.1.png";
 	case 5:
 	    return "assets/Intro/intro6.png";
 	case 6:
 	    return "assets/Intro/intro7.png";
 	case 7:
+		// Exposition Part
 	    return "assets/Exposition/E1.png";
 	case 8:
 	    return "assets/Exposition/E2.png";
@@ -395,33 +448,50 @@ function getPageImage(prevInc){
 	case 11:    
 	    return "assets/Exposition/E5.png";
 	case 12:
+		// Rising Action Part
 	    return "assets/Exposition/E6.png";
 	case 13:
 	    return "assets/Exposition/E7.png";
 	case 14:
-	    return "assets/testPage.png";
+	    return "assets/Rising_Action/RAC1.png";
 	case 15:
-	    return "assets/testPage.png";
+	    return "assets/Rising_Action/RAC2.png";
 	case 16:
-	    return "assets/testPage.png";
+	    return "assets/Rising_Action/RAC3.png";
 	case 17:
-	    return "assets/testPage.png";
+	    return "assets/Rising_Action/RAC4.png";
 	case 18:
 	    return "assets/testPage.png";
-
+	case 19:
+	    return "assets/testPage.png";
+	case 20:
+	    return "assets/testPage.png";
+	case 21:
+	    return "aassets/testPage.png";
+	case 22:
+	    return "assets/testPage.png";
+	case 23:
+	    return "assets/testPage.png";
+	case 24:
+	    return "assets/testPage.png";
+	case 25:
+	    return "assets/testPage.png";
+	case 26:
+	    return "aassets/testPage.png";
 	}
     }
     switch(pageNumber-prevInc){
+		// Right Side of the Page
 	case 1:
 	    return "assets/Intro/panel1.png";
 	case 2:
 	    return "assets/Intro/panel2.png";
 	case 3:
-	    return "assets/textPage.png";
+	    return "assets/Intro/panel3.png";
 	case 4:
 	    return "assets/Intro/panel4.png";
 	case 5:
-	    return "assets/textPage.png";
+	    return "assets/Intro/panel5.png";
 	case 6:
 	    return "assets/Intro/panel6.png";
 	case 7:
@@ -441,13 +511,29 @@ function getPageImage(prevInc){
 	case 14:
 	    return "assets/Exposition/Panel7.png";
 	case 15:
-	    return "assets/textPage.png";
+	    return "assets/Rising_Action/TRAC1.png";
 	case 16:
-	    return "assets/textPage.png";
+	    return "assets/Rising_Action/TRAC2.png";
 	case 17:
-	    return "assets/textPage.png";
+	    return "assets/Rising_Action/TRAC3.png";
 	case 18:
+	    return "assets/Rising_Action/TRAC4.png";
+	case 19:
 	    return "assets/textPage.png";
+	case 20:
+	    return "assets/textPage.png";
+	case 21:
+	    return "assets/textPage.png";
+	case 22:
+	    return "assets/textPage.png";
+	case 23:
+	    return "assets/textPage.png";
+	case 24:
+		return "assets/textPage.png";
+	case 25:
+		return "assets/textPage.png";
+	case 26:
+		return "assets/textPage.png";
     }
 }
 
