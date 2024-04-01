@@ -2,7 +2,7 @@ var flipFrames = 30;
 var translatePerFrame = 0;
 var rotationPerFrame = 0;
 
-var totalPages = 5;
+var totalPages = 19;
 var pageCount = 1;
 var pageNumber = 0;
 var moving = false;
