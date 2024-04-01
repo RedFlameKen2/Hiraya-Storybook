@@ -204,7 +204,6 @@ function changeImage(){
     let pageSrc;
     let pageNo = pageNumber;
     if(backflip){
-	pageNo++; 
 	switch(pageNo){
 	    case 1:
 		pageSrc = "assets/Intro/panel1.png";
@@ -395,18 +394,20 @@ function getPageImage(prevInc){
 	case 7:
 	    return "assets/Intro/panel7.png";
 	case 8:
-	    return "assets/Exposition/Panel1.png";
+	    return "assets/textPage.png";
 	case 9:
-	    return "assets/Exposition/Panel2.png";
+	    return "assets/Exposition/Panel1.png";
 	case 10:
+	    return "assets/Exposition/Panel2.png";
+	case 11:
 	    return "assets/Exposition/Panel3.png";
-	case 11:    
+	case 12:    
 	    return "assets/Exposition/Panel4.png";
-	case 12:
-	    return "assets/Exposition/Panel5.png";
 	case 13:
-	    return "assets/Exposition/Panel6.png";
+	    return "assets/Exposition/Panel5.png";
 	case 14:
+	    return "assets/Exposition/Panel6.png";
+	case 15:
 	    return "assets/Exposition/Panel7.png";
 	case 15:
 	    return "assets/textPage.png";
