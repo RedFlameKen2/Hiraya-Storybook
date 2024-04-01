@@ -318,7 +318,7 @@ function changeImage(){
 	}
     }
     if(bookClosing)
-	pageSrc = "assets/Cover.svg";
+	pageSrc = "assets/NewCover.png";
     rotation -= 180;
     if(backflip)
 	curPage.style.justifyContent = "end";
