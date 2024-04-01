@@ -219,24 +219,27 @@ function changeImage(){
 		pageSrc = "assets/Intro/panel7.png";
 		break;
 	    case 8:
-		pageSrc = "assets/Exposition/Panel1.png";
+		pageSrc = "assets/textPages.png";
 		break;
 	    case 9:
-		pageSrc = "assets/Exposition/Panel2.png";
+		pageSrc = "assets/Exposition/Panel1.png";
 		break;
 	    case 10:
+		pageSrc = "assets/Exposition/Panel2.png";
+		break;
+	    case 11:
 		pageSrc = "assets/Exposition/Panel3.png";
 		break;
-	    case 11:    
+	    case 12:    
 		pageSrc = "assets/Exposition/Panel4.png";
 		break;
-	    case 12:
+	    case 13:
 		pageSrc = "assets/Exposition/Panel5.png";
 		break;
-	    case 13:
+	    case 14:
 		pageSrc = "assets/Exposition/Panel6.png";
 		break;
-	    case 14:
+	    case 15:
 		pageSrc = "assets/Exposition/Panel7.png";
 		break;
 	    case 15:
