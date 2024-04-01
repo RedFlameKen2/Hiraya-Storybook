@@ -2,7 +2,7 @@ var flipFrames = 30;
 var translatePerFrame = 0;
 var rotationPerFrame = 0;
 
-var totalPages = 38;
+var totalPages = 34;
 var pageCount = 1;
 var pageNumber = 0;
 var moving = false;
@@ -452,6 +452,8 @@ function changeImage(){
     }
     if(bookClosing)
 	pageSrc = "assets/NewCover.png";
+    if(bookEnding)
+	pageSrc = "assets/bookback.png";
     rotation -= 180;
     if(backflip)
 	curPage.style.justifyContent = "end";
@@ -597,7 +599,7 @@ function getPageImage(prevInc){
 	case 29:
 		return "assets/Climax_falling_conclu/tconclu1.png";
 	case 30:
-		return "aassets/Climax_falling_conclu/tconclu2.0.png";
+		return "assets/Climax_falling_conclu/tconclu2.0.png";
 	case 31:
 		return "assets/Climax_falling_conclu/tconclu2.1.png";
 	case 32:
