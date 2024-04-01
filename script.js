@@ -1,19 +1,22 @@
-var flipFrames = 60;
+var flipFrames = 30;
 var translatePerFrame = 0;
 var rotationPerFrame = 0;
 
+var totalPages = 15;
 var pageCount = 1;
 var pageNumber = 0;
 var moving = false;
 var backflip = false;
 var lastMode = 0;
 var bookClosing = false;
+var bookEnding = false;
+var bookEnded = false;
+var bookOpening = false;
 var translation = 0;
 var rotation = 0;
 var curPage;
 var newPage;
 var pages = [];
-
 
 init();
 
@@ -59,7 +62,13 @@ function init(){
     rotationPerFrame = 180/flipFrames;
 }
 function nextPage(){
-    if(moving) return;
+    if(moving || (pageNumber == totalPages && bookEnded)) return;
+    if(pageNumber == totalPages && pageCount == 2){
+	endBook();
+	return;
+    }
+    if(pageNumber == 0)
+	bookOpening = true;
     pageNumber++;
     if(pageCount > 1 && lastMode == 1)
 	curPage = newPage;
@@ -76,7 +85,11 @@ function prevPage(){
 	closeBook();
 	return;
     }
-    pageNumber--;
+    if(bookEnded){ 
+	bookOpening = true;
+    }
+    else 
+	pageNumber--;
     if(lastMode == 2)
 	curPage = newPage;
     backflip = true;
@@ -92,6 +105,12 @@ function closeBook(){
     backflip = true;
     rotation = 0;
     if(lastMode == 2)
+	curPage = newPage;
+    startPageMoving();
+}
+function endBook(){
+    bookEnding = true;
+    if(lastMode == 1)
 	curPage = newPage;
     startPageMoving();
 }
@@ -123,12 +142,14 @@ function stopMoving(){
     curPage.style.width = "50%";
     curPage.childNodes[0].style.width = "100%";
     curPage.style.justifyContent = "center";
-    if(backflip){
+    if(bookEnded){
+	curPage.style.transform = "rotateY(0deg)";
+    }else if(backflip){
 	curPage.style.transform = "translateX(100%) rotateY(0deg)";
-    } else {
+    }else {
 	curPage.style.transform = "translateX(-100%) rotateY(0deg)";
     }
-    if(pageCount >= 3 || bookClosing)
+    if(pageCount >= 3 || bookClosing || bookEnding)
 	removePage();
     if(backflip) backflip = false;
     translation = 0;
@@ -138,17 +159,31 @@ function stopMoving(){
 	bookClosing = false;
 	centerBook();
     }
+    if(bookEnding){
+	pageNumber = totalPages;
+	bookEnding = false;
+	bookEnded = true;
+	centerBook();
+    }
+    if(bookOpening)
+	bookOpening = false;
+    if(bookEnded)
+	bookEnded = false;
 }
 function drawCurPageTransition(){
     if(bookClosing && lastMode == 1){
-	curPage.style.transform = "translate(-50%) rotateY("+rotation+"deg)";
+	curPage.style.transform = "translateX(-50%) rotateY("+rotation+"deg)";
 	return;
     }
-    if(bookClosing || curPage != pages[0]){
-	curPage.style.transform = "rotateY("+rotation+"deg)";
+    if(pageNumber == totalPages && pageCount == 1){
+	curPage.style.transform = "translateX(-50%) rotateY("+rotation+"deg)";
 	return;
     }
-    curPage.style.transform = "translate(-50%) rotateY("+rotation+"deg)";
+    if(bookEnding || bookClosing || bookOpening){
+	curPage.style.transform = "translateX(-50%) rotateY("+rotation+"deg)";
+	return;
+    }
+    curPage.style.transform = "rotateY("+rotation+"deg)";
 }
 function createPage(){
     const book = document.getElementById("book");
