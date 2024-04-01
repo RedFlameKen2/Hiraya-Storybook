@@ -63,7 +63,7 @@ function init(){
 }
 function nextPage(){
     if(moving || (pageNumber == totalPages && bookEnded)) return;
-    if(pageNumber == totalPages && pageCount == 2){
+    if(pageNumber+1 == totalPages && pageCount == 2){
 	endBook();
 	return;
     }
@@ -89,8 +89,7 @@ function prevPage(){
 	bookEnded = false;
 	bookOpening = true;
     }
-    else 
-	pageNumber--;
+    pageNumber--;
     if(lastMode == 2)
 	curPage = newPage;
     backflip = true;
@@ -143,7 +142,7 @@ function stopMoving(){
     curPage.style.width = "50%";
     curPage.childNodes[0].style.width = "100%";
     curPage.style.justifyContent = "center";
-    if(bookOpening && pageNumber == totalPages){
+    if(bookOpening && pageNumber+1 == totalPages){
 	curPage.style.transform = "rotateY(0deg)";
     }else if(backflip){
 	curPage.style.transform = "translateX(100%) rotateY(0deg)";
@@ -172,13 +171,10 @@ function stopMoving(){
 function drawCurPageTransition(){
     if(bookClosing && lastMode == 1){
 	curPage.style.transform = "translateX(-50%) rotateY("+rotation+"deg)";
+	console.log("motion 0");
 	return;
     }
-    if(pageNumber == totalPages && pageCount == 1){
-	curPage.style.transform = "translateX(-50%) rotateY("+rotation+"deg)";
-	return;
-    }
-    if(bookEnding || bookOpening){
+    if(bookOpening || bookEnding && lastMode == 2){
 	curPage.style.transform = "translateX(-50%) rotateY("+rotation+"deg)";
 	return;
     }
