@@ -2,7 +2,7 @@ var flipFrames = 30;
 var translatePerFrame = 0;
 var rotationPerFrame = 0;
 
-var totalPages = 15;
+var totalPages = 5;
 var pageCount = 1;
 var pageNumber = 0;
 var moving = false;
@@ -43,11 +43,9 @@ function runLoop(){
 
 function centerBook(){
        // Only center the first page if it's the current page
-    if (curPage === pages[0]) {
         curPage.style.position = 'absolute';
         curPage.style.left = '50%';
         curPage.style.transform = 'translateX(-50%)';
-    }
 }
 
 function initPages(){
@@ -74,7 +72,6 @@ function nextPage(){
 	curPage = newPage;
     startPageMoving();
     createPage();
-    centerBook();
     if(pageCount < 3)
 	pageCount++;
     lastMode = 1;
@@ -90,7 +87,7 @@ function prevPage(){
 	bookOpening = true;
     }
     else
-    pageNumber--;
+	pageNumber--;
     if(lastMode == 2)
 	curPage = newPage;
     backflip = true;
@@ -114,7 +111,6 @@ function endBook(){
     if(lastMode == 1)
 	curPage = newPage;
     startPageMoving();
-    lastMode = 1;
 }
 
 function startPageMoving(){
@@ -165,6 +161,7 @@ function stopMoving(){
 	pageNumber = totalPages;
 	bookEnding = false;
 	bookEnded = true;
+	lastMode = 1;
 	centerBook();
     }
     if(bookOpening)
@@ -173,18 +170,14 @@ function stopMoving(){
 function drawCurPageTransition(){
     if(bookClosing && lastMode == 1){
 	curPage.style.transform = "translateX(-50%) rotateY("+rotation+"deg)";
-	console.log("motion 0");
 	return;
     }
-    if(bookEnding && lastMode == 2){
-	curPage.style.transform = "translateX(-100%) rotateY("+rotation+"deg)";
-	return;
-    }
-    if(bookOpening){
+    if(bookOpening || (pageNumber == totalPages && lastMode == 2)){
 	curPage.style.transform = "translateX(-50%) rotateY("+rotation+"deg)";
 	return;
     }
     curPage.style.transform = "rotateY("+rotation+"deg)";
+    console.log("goofy ahh");
 }
 function createPage(){
     const book = document.getElementById("book");
@@ -208,6 +201,7 @@ function createPage(){
     page.appendChild(pageImage);
 
     book.appendChild(page);
+    console.log(page);
     newPage = page;
     if(backflip){
 	pages.unshift(page);
