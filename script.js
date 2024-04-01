@@ -1,3 +1,7 @@
+var flipFrames = 60;
+var translatePerFrame = 0;
+var rotationPerFrame = 0;
+
 var pageCount = 1;
 var pageNumber = 0;
 var moving = false;
@@ -11,7 +15,7 @@ var newPage;
 var pages = [];
 
 
-initPages();
+init();
 
 window.requestAnimationFrame(runLoop);
 
@@ -48,6 +52,11 @@ function initPages(){
     pages.push(firstElement);
     curPage = firstElement;
     centerBook();
+}
+function init(){
+    initPages();
+    translatePerFrame = 100/flipFrames;
+    rotationPerFrame = 180/flipFrames;
 }
 function nextPage(){
     if(moving) return;
@@ -101,11 +110,11 @@ function startPageMoving(){
 
 function moveCurPage(){
     if(backflip){
-	translation += 2.0833333333333;
-	rotation += 3.75;
+	translation += translatePerFrame;
+	rotation += rotationPerFrame;
     } else {
-	translation -= 2.0833333333333;
-	rotation -= 3.75;
+	translation -= translatePerFrame;
+	rotation -= rotationPerFrame;
     }
 }
 
@@ -195,7 +204,6 @@ function changeImage(){
     let pageSrc;
     let pageNo = pageNumber;
     if(backflip){
-	pageNo++; 
 	switch(pageNo){
 	    case 1:
 		pageSrc = "assets/Intro/panel1.png";
@@ -219,27 +227,24 @@ function changeImage(){
 		pageSrc = "assets/Intro/panel7.png";
 		break;
 	    case 8:
-		pageSrc = "assets/textPages.png";
-		break;
-	    case 9:
 		pageSrc = "assets/Exposition/Panel1.png";
 		break;
-	    case 10:
+	    case 9:
 		pageSrc = "assets/Exposition/Panel2.png";
 		break;
-	    case 11:
+	    case 10:
 		pageSrc = "assets/Exposition/Panel3.png";
 		break;
-	    case 12:    
+	    case 11:    
 		pageSrc = "assets/Exposition/Panel4.png";
 		break;
-	    case 13:
+	    case 12:
 		pageSrc = "assets/Exposition/Panel5.png";
 		break;
-	    case 14:
+	    case 13:
 		pageSrc = "assets/Exposition/Panel6.png";
 		break;
-	    case 15:
+	    case 14:
 		pageSrc = "assets/Exposition/Panel7.png";
 		break;
 	    case 15:
