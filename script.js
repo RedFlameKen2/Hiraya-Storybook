@@ -2,7 +2,7 @@ var flipFrames = 30;
 var translatePerFrame = 0;
 var rotationPerFrame = 0;
 
-var totalPages = 19;
+var totalPages = 38;
 var pageCount = 1;
 var pageNumber = 0;
 var moving = false;
@@ -291,28 +291,52 @@ function changeImage(){
 		pageSrc = "assets/Rising_Action/TRAC4.png";
 		break;
 		case 19:
-		pageSrc = "assets/textPage.png";
+		pageSrc = "assets/Conflict/tcon1.png";
 		break;
 	    case 20:
-		pageSrc = "assets/textPage.png";
+		pageSrc = "assets/Conflict/tcon2.png";
 		break;
 	    case 21:
-		pageSrc = "assets/textPage.png";
+		pageSrc = "assets/Conflict/tcon3.png";
 		break;
 	    case 22:
-		pageSrc = "assets/textPage.png";
+		pageSrc = "assets/Conflict/tcon4.png";
 		break;
 	    case 23:
-		pageSrc = "assets/textPage.png";
+		pageSrc = "assets/Conflict/tcon5.png";
 		break;
 		case 24:
-		pageSrc = "assets/textPage.png";
+		pageSrc = "assets/Conflict/tcon6.png";
 		break;
 	    case 25:
-		pageSrc = "assets/textPage.png";
+		pageSrc = "assets/Climax_falling_conclu/tcl1.png";
 		break;
 	    case 26:
-		pageSrc = "assets/textPage.png";
+		pageSrc = "assets/Climax_falling_conclu/tcl2.png";
+		break;
+		case 27:
+		pageSrc = "assets/Climax_falling_conclu/tfall1.png";
+		break;
+	    case 28:
+		pageSrc = "assets/Climax_falling_conclu/tfall2.png";
+		break;
+	    case 29:
+		pageSrc = "assets/Climax_falling_conclu/tconclu1.png";
+		break;
+		case 30:
+		pageSrc = "assets/Climax_falling_conclu/tconclu2.0.png";
+		break;
+	    case 31:
+		pageSrc = "assets/Climax_falling_conclu/tconclu2.1.png";
+		break;
+		case 32:
+		pageSrc = "assets/Climax_falling_conclu/tconclu2.2.png";
+		break;
+	    case 33:
+		pageSrc = "assets/Climax_falling_conclu/tconclu2.3.png";
+		break;
+		case 34:
+		pageSrc = "assets/Climax_falling_conclu/tconclu3.png";
 		break;
 	}
     } else {
@@ -377,28 +401,52 @@ function changeImage(){
 		pageSrc = "assets/Rising_Action/RAC4.png";
 		break;
 	    case 18:
-		pageSrc = "assets/testPage.png";
+		pageSrc = "assets/Conflict/Con1.png";
 		break;
 		case 19:
-		pageSrc = "assets/testPage.png";
+		pageSrc = "assets/Conflict/Con2.png";
 		break;
 	    case 20:
-		pageSrc = "assets/testPage.png";
+		pageSrc = "assets/Conflict/Con3.png";
 		break;
 	    case 21:
-		pageSrc = "assets/testPage.png";
+		pageSrc = "assets/Conflict/Con4.png";
 		break;
-		case 23:
-		pageSrc = "assets/testPage.png";
+		case 22:
+		pageSrc = "assets/Conflict/Con5.png";
+		break;
+	    case 23:
+		pageSrc = "assets/Conflict/Con6.png";
 		break;
 	    case 24:
-		pageSrc = "assets/testPage.png";
+		pageSrc = "assets/Climax_falling_conclu/CL1.png";
 		break;
-	    case 25:
-		pageSrc = "assets/testPage.png";
+		case 25:
+		pageSrc = "assets/Climax_falling_conclu/CL2.png";
 		break;
-		case 26:
-		pageSrc = "assets/testPage.png";
+	    case 26:
+		pageSrc = "assets/Climax_falling_conclu/FAC1.png";
+		break;
+		case 27:
+		pageSrc = "assets/Climax_falling_conclu/FAC2.png";
+		break;
+	    case 28:
+		pageSrc = "assets/Climax_falling_conclu/CONCLU1.png";
+		break;
+		case 29:
+		pageSrc = "assets/Climax_falling_conclu/CONCLU2.png";
+		break;
+	    case 30:
+		pageSrc = "assets/Climax_falling_conclu/CONCLU2.png";
+		break;
+		case 31:
+		pageSrc = "assets/Climax_falling_conclu/CONCLU2.png";
+		break;
+	    case 32:
+		pageSrc = "assets/Climax_falling_conclu/CONCLU2.png";
+		break;
+		case 33:
+		pageSrc = "assets/Climax_falling_conclu/CONCLU3.png";
 		break;
 	}
     }
@@ -455,23 +503,37 @@ function getPageImage(prevInc){
 	case 17:
 	    return "assets/Rising_Action/RAC4.png";
 	case 18:
-	    return "assets/testPage.png";
+	    return "assets/Conflict/Con1.png";
 	case 19:
-	    return "assets/testPage.png";
+	    return "assets/Conflict/Con2.png";
 	case 20:
-	    return "assets/testPage.png";
+	    return "assets/Conflict/Con3.png";
 	case 21:
-	    return "aassets/testPage.png";
+	    return "assets/Conflict/Con4.png";
 	case 22:
-	    return "assets/testPage.png";
+	    return "assets/Conflict/Con5.png";
 	case 23:
-	    return "assets/testPage.png";
+	    return "assets/Conflict/Con6.png";
 	case 24:
-	    return "assets/testPage.png";
+	    return "assets/Climax_falling_conclu/CL1.png";
 	case 25:
-	    return "assets/testPage.png";
+	    return "assets/Climax_falling_conclu/CL2.png";
 	case 26:
-	    return "aassets/testPage.png";
+	    return "assets/Climax_falling_conclu/FAC1.png";
+	case 27:
+		return "assets/Climax_falling_conclu/FAC2.png";
+	case 28:
+		return "assets/Climax_falling_conclu/CONCLU1.png";
+	case 29:
+		return "assets/Climax_falling_conclu/CONCLU2.0.png";
+	case 30:
+		return "assets/Climax_falling_conclu/CONCLU2.1.png";
+	case 31:
+		return "assets/Climax_falling_conclu/CONCLU2.2.png";
+	case 32:
+		return "assets/Climax_falling_conclu/CONCLU2.3.png";
+	case 33:
+		return "assets/Climax_falling_conclu/CONCLU3.png";
 	}
     }
     switch(pageNumber-prevInc){
@@ -513,21 +575,37 @@ function getPageImage(prevInc){
 	case 18:
 	    return "assets/Rising_Action/TRAC4.png";
 	case 19:
-	    return "assets/textPage.png";
+	    return "assets/Conflict/tcon1.png";
 	case 20:
-	    return "assets/textPage.png";
+	    return "assets/Conflict/tcon2.png";
 	case 21:
-	    return "assets/textPage.png";
+	    return "assets/Conflict/tcon3.png";
 	case 22:
-	    return "assets/textPage.png";
+	    return "assets/Conflict/tcon4.png";
 	case 23:
-	    return "assets/textPage.png";
+	    return "assets/Conflict/tcon5.png";
 	case 24:
-		return "assets/textPage.png";
+		return "assets/Conflict/tcon6.png";
 	case 25:
-		return "assets/textPage.png";
+		return "assets/Climax_falling_conclu/tcl1.png";
 	case 26:
-		return "assets/textPage.png";
+		return "assets/Climax_falling_conclu/tcl2.png";
+	case 27:
+		return "assets/Climax_falling_conclu/tfall1.png";
+	case 28:
+		return "assets/Climax_falling_conclu/tfall2.png";
+	case 29:
+		return "assets/Climax_falling_conclu/tconclu1.png";
+	case 30:
+		return "aassets/Climax_falling_conclu/tconclu2.0.png";
+	case 31:
+		return "assets/Climax_falling_conclu/tconclu2.1.png";
+	case 32:
+		return "assets/Climax_falling_conclu/tconclu2.2.png";
+	case 33:
+		return "assets/Climax_falling_conclu/tconclu2.3.png";	
+	case 34:
+		return "assets/Climax_falling_conclu/tconclu3.png";
     }
 }
 
