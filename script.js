@@ -198,28 +198,28 @@ function changeImage(){
 	pageNo++; 
 	switch(pageNo){
 	    case 0:
-		pageSrc = "assets/textPage.png";
+		pageSrc = "assets/NewCover.png";
 		break;
 	    case 1:
-		pageSrc = "assets/textPage.png";
+		pageSrc = "assets/Intro/panel1.png";
 		break;
 	    case 2:
-		pageSrc = "assets/textPage.png";
+		pageSrc = "assets/Intro/panel2.png";
 		break;
 	    case 3:
 		pageSrc = "assets/textPage.png";
 		break;
 	    case 4:
-		pageSrc = "assets/textPage.png";
+		pageSrc = "assets/Intro/panel4.png";
 		break;
 	    case 5:
 		pageSrc = "assets/textPage.png";
 		break;
 	    case 6:
-		pageSrc = "assets/textPage.png";
+		pageSrc = "assets/Intro/panel6.png";
 		break;
 	    case 7:
-		pageSrc = "assets/textPage.png";
+		pageSrc = "assets/Intro/panel7.png";
 		break;
 	    case 8:
 		pageSrc = "assets/textPage.png";
@@ -317,8 +317,6 @@ function changeImage(){
 		break;
 	}
     }
-    if(bookClosing)
-	pageSrc = "assets/NewCover.png";
     rotation -= 180;
     if(backflip)
 	curPage.style.justifyContent = "end";
@@ -371,22 +369,20 @@ function getPageImage(prevInc){
 	}
     }
     switch(pageNumber-prevInc){
-	case 0:
-	    return "assets/textPage.png";
 	case 1:
-	    return "assets/textPage.png";
+	    return "assets/Intro/panel1.png";
 	case 2:
-	    return "assets/textPage.png";
+	    return "assets/Intro/panel2.png";
 	case 3:
 	    return "assets/textPage.png";
 	case 4:
-	    return "assets/textPage.png";
+	    return "assets/Intro/panel4.png";
 	case 5:
 	    return "assets/textPage.png";
 	case 6:
-	    return "assets/textPage.png";
+	    return "assets/Intro/panel6.png";
 	case 7:
-	    return "assets/textPage.png";
+	    return "assets/Intro/panel7.png";
 	case 8:
 	    return "assets/textPage.png";
 	case 9:
