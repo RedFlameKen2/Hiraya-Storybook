@@ -177,7 +177,6 @@ function drawCurPageTransition(){
 	return;
     }
     curPage.style.transform = "rotateY("+rotation+"deg)";
-    console.log("goofy ahh");
 }
 function createPage(){
     const book = document.getElementById("book");
@@ -201,7 +200,6 @@ function createPage(){
     page.appendChild(pageImage);
 
     book.appendChild(page);
-    console.log(page);
     newPage = page;
     if(backflip){
 	pages.unshift(page);
