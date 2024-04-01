@@ -86,6 +86,7 @@ function prevPage(){
 	return;
     }
     if(bookEnded){ 
+	bookEnded = false;
 	bookOpening = true;
     }
     else 
@@ -142,7 +143,7 @@ function stopMoving(){
     curPage.style.width = "50%";
     curPage.childNodes[0].style.width = "100%";
     curPage.style.justifyContent = "center";
-    if(bookEnded){
+    if(bookOpening && pageNumber == totalPages){
 	curPage.style.transform = "rotateY(0deg)";
     }else if(backflip){
 	curPage.style.transform = "translateX(100%) rotateY(0deg)";
@@ -167,8 +168,6 @@ function stopMoving(){
     }
     if(bookOpening)
 	bookOpening = false;
-    if(bookEnded)
-	bookEnded = false;
 }
 function drawCurPageTransition(){
     if(bookClosing && lastMode == 1){
@@ -179,7 +178,7 @@ function drawCurPageTransition(){
 	curPage.style.transform = "translateX(-50%) rotateY("+rotation+"deg)";
 	return;
     }
-    if(bookEnding || bookClosing || bookOpening){
+    if(bookEnding || bookOpening){
 	curPage.style.transform = "translateX(-50%) rotateY("+rotation+"deg)";
 	return;
     }
