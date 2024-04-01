@@ -197,9 +197,6 @@ function changeImage(){
     if(backflip){
 	pageNo++; 
 	switch(pageNo){
-	    case 0:
-		pageSrc = "assets/NewCover.png";
-		break;
 	    case 1:
 		pageSrc = "assets/Intro/panel1.png";
 		break;
@@ -317,6 +314,8 @@ function changeImage(){
 		break;
 	}
     }
+    if(bookClosing)
+	pageSrc = "assets/NewCover.png";
     rotation -= 180;
     if(backflip)
 	curPage.style.justifyContent = "end";
