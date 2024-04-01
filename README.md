@@ -1,5 +1,5 @@
 # Hiraya Storybook
-
+![Logo](assets/NewCover.png)
 ## Project Overview
 Welcome to the Hiraya Storybook project. This is a private repository for CSC11 Group 2's Integrated Output.
 
