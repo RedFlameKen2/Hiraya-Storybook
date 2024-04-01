@@ -235,106 +235,106 @@ function changeImage(){
 		// Right side of the Page
 	switch(pageNo){
 	    case 1:
-		pageSrc = "assets/Intro/panel1.png";
+		pageSrc = "assets/Intro/panel1.jpg";
 		break;
 	    case 2:
-		pageSrc = "assets/Intro/panel2.png";
+		pageSrc = "assets/Intro/panel2.jpg";
 		break;
 	    case 3:
-		pageSrc = "assets/Intro/panel3.png";
+		pageSrc = "assets/Intro/panel3.jpg";
 		break;
 	    case 4:
-		pageSrc = "assets/Intro/panel4.png";
+		pageSrc = "assets/Intro/panel4.jpg";
 		break;
 	    case 5:
-		pageSrc = "assets/Intro/panel5.png";
+		pageSrc = "assets/Intro/panel5.jpg";
 		break;
 	    case 6:
-		pageSrc = "assets/Intro/panel6.png";
+		pageSrc = "assets/Intro/panel6.jpg";
 		break;
 	    case 7:
-		pageSrc = "assets/Intro/panel7.png";
+		pageSrc = "assets/Intro/panel7.jpg";
 		break;
 	    case 8:
-		pageSrc = "assets/Exposition/Panel1.png";
+		pageSrc = "assets/Exposition/Panel1.jpg";
 		break;
 	    case 9:
-		pageSrc = "assets/Exposition/Panel2.png";
+		pageSrc = "assets/Exposition/Panel2.jpg";
 		break;
 	    case 10:
-		pageSrc = "assets/Exposition/Panel3.png";
+		pageSrc = "assets/Exposition/Panel3.jpg";
 		break;
 	    case 11:    
-		pageSrc = "assets/Exposition/Panel4.png";
+		pageSrc = "assets/Exposition/Panel4.jpg";
 		break;
 	    case 12:
-		pageSrc = "assets/Exposition/Panel5.png";
+		pageSrc = "assets/Exposition/Panel5.jpg";
 		break;
 	    case 13:
-		pageSrc = "assets/Exposition/Panel6.png";
+		pageSrc = "assets/Exposition/Panel6.jpg";
 		break;
 	    case 14:
-		pageSrc = "assets/Exposition/Panel7.png";
+		pageSrc = "assets/Exposition/Panel7.jpg";
 		break;
 	    case 15:
-		pageSrc = "assets/Rising_Action/TRAC1.png";
+		pageSrc = "assets/Rising_Action/TRAC1.jpg";
 		break;
 	    case 16:
-		pageSrc = "assets/Rising_Action/TRAC2.png";
+		pageSrc = "assets/Rising_Action/TRAC2.jpg";
 		break;
 	    case 17:
-		pageSrc = "assets/Rising_Action/TRAC3.png";
+		pageSrc = "assets/Rising_Action/TRAC3.jpg";
 		break;
 	    case 18:
-		pageSrc = "assets/Rising_Action/TRAC4.png";
+		pageSrc = "assets/Rising_Action/TRAC4.jpg";
 		break;
 		case 19:
-		pageSrc = "assets/Conflict/tcon1.png";
+		pageSrc = "assets/Conflict/tcon1.jpg";
 		break;
 	    case 20:
-		pageSrc = "assets/Conflict/tcon2.png";
+		pageSrc = "assets/Conflict/tcon2.jpg";
 		break;
 	    case 21:
-		pageSrc = "assets/Conflict/tcon3.png";
+		pageSrc = "assets/Conflict/tcon3.jpg";
 		break;
 	    case 22:
-		pageSrc = "assets/Conflict/tcon4.png";
+		pageSrc = "assets/Conflict/tcon4.jpg";
 		break;
 	    case 23:
-		pageSrc = "assets/Conflict/tcon5.png";
+		pageSrc = "assets/Conflict/tcon5.jpg";
 		break;
 		case 24:
-		pageSrc = "assets/Conflict/tcon6.png";
+		pageSrc = "assets/Conflict/tcon6.jpg";
 		break;
 	    case 25:
-		pageSrc = "assets/Climax_falling_conclu/tcl1.png";
+		pageSrc = "assets/Climax_falling_conclu/tcl1.jpg";
 		break;
 	    case 26:
-		pageSrc = "assets/Climax_falling_conclu/tcl2.png";
+		pageSrc = "assets/Climax_falling_conclu/tcl2.jpg";
 		break;
 		case 27:
-		pageSrc = "assets/Climax_falling_conclu/tfall1.png";
+		pageSrc = "assets/Climax_falling_conclu/tfall1.jpg";
 		break;
 	    case 28:
-		pageSrc = "assets/Climax_falling_conclu/tfall2.png";
+		pageSrc = "assets/Climax_falling_conclu/tfall2.jpg";
 		break;
 	    case 29:
-		pageSrc = "assets/Climax_falling_conclu/tconclu1.png";
+		pageSrc = "assets/Climax_falling_conclu/tconclu1.jpg";
 		break;
 		case 30:
-		pageSrc = "assets/Climax_falling_conclu/tconclu2.0.png";
+		pageSrc = "assets/Climax_falling_conclu/tconclu2.0.jpg";
 		break;
 	    case 31:
-		pageSrc = "assets/Climax_falling_conclu/tconclu2.1.png";
+		pageSrc = "assets/Climax_falling_conclu/tconclu2.1.jpg";
 		break;
 		case 32:
-		pageSrc = "assets/Climax_falling_conclu/tconclu2.2.png";
+		pageSrc = "assets/Climax_falling_conclu/tconclu2.2.jpg";
 		break;
 	    case 33:
-		pageSrc = "assets/Climax_falling_conclu/tconclu2.3.png";
+		pageSrc = "assets/Climax_falling_conclu/tconclu2.3.jpg";
 		break;
 		case 34:
-		pageSrc = "assets/Climax_falling_conclu/tconclu3.png";
+		pageSrc = "assets/Climax_falling_conclu/tconclu3.jpg";
 		break;
 	}
     } else {
@@ -343,108 +343,108 @@ function changeImage(){
 		// Left Side of the Page
 	    case 0:
 			// Intro Part
-		pageSrc = "assets/Intro/intro1.png";
+		pageSrc = "assets/Intro/intro1.jpg";
 		break;
 	    case 1:
-		pageSrc = "assets/Intro/intro2.png";
+		pageSrc = "assets/Intro/intro2.jpg";
 		break;
 	    case 2:
-		pageSrc = "assets/Intro/intro3.0.png";
+		pageSrc = "assets/Intro/intro3.0.jpg";
 		break;
 	    case 3:
-		pageSrc = "assets/Intro/intro4.png";
+		pageSrc = "assets/Intro/intro4.jpg";
 		break;
 	    case 4:
-		pageSrc = "assets/Intro/intro5.png";
+		pageSrc = "assets/Intro/intro5.jpg";
 		break;
 	    case 5:
-		pageSrc = "assets/Intro/intro6.png";
+		pageSrc = "assets/Intro/intro6.jpg";
 		break;
 	    case 6:
-		pageSrc = "assets/Intro/intro7.png";
+		pageSrc = "assets/Intro/intro7.jpg";
 		break;
 	    case 7:
 			// Exposition Part
-		pageSrc = "assets/Exposition/E1.png";
+		pageSrc = "assets/Exposition/E1.jpg";
 		break;
 	    case 8:
-		pageSrc = "assets/Exposition/E2.png";
+		pageSrc = "assets/Exposition/E2.jpg";
 		break;
 	    case 9:
-		pageSrc = "assets/Exposition/E3.png";
+		pageSrc = "assets/Exposition/E3.jpg";
 		break;
 	    case 10:
-		pageSrc = "assets/Exposition/E4.png";
+		pageSrc = "assets/Exposition/E4.jpg";
 		break;
 	    case 11:    
-		pageSrc = "assets/Exposition/E5.png";
+		pageSrc = "assets/Exposition/E5.jpg";
 		break;
 	    case 12:
 			// Rising Action Part
-		pageSrc = "assets/Exposition/E6.png";
+		pageSrc = "assets/Exposition/E6.jpg";
 		break;
 	    case 13:
-		pageSrc = "assets/Exposition/E7.png";
+		pageSrc = "assets/Exposition/E7.jpg";
 		break;
 	    case 14:
-		pageSrc = "assets/Rising_Action/RAC1.png";
+		pageSrc = "assets/Rising_Action/RAC1.jpg";
 		break;
 	    case 15:
-		pageSrc = "assets/Rising_Action/RAC2.png";
+		pageSrc = "assets/Rising_Action/RAC2.jpg";
 		break;
 	    case 16:
-		pageSrc = "assets/Rising_Action/RAC3.png";
+		pageSrc = "assets/Rising_Action/RAC3.jpg";
 		break;
 	    case 17:
-		pageSrc = "assets/Rising_Action/RAC4.png";
+		pageSrc = "assets/Rising_Action/RAC4.jpg";
 		break;
 	    case 18:
-		pageSrc = "assets/Conflict/Con1.png";
+		pageSrc = "assets/Conflict/Con1.jpg";
 		break;
 		case 19:
-		pageSrc = "assets/Conflict/Con2.png";
+		pageSrc = "assets/Conflict/Con2.jpg";
 		break;
 	    case 20:
-		pageSrc = "assets/Conflict/Con3.png";
+		pageSrc = "assets/Conflict/Con3.jpg";
 		break;
 	    case 21:
-		pageSrc = "assets/Conflict/Con4.png";
+		pageSrc = "assets/Conflict/Con4.jpg";
 		break;
 		case 22:
-		pageSrc = "assets/Conflict/Con5.png";
+		pageSrc = "assets/Conflict/Con5.jpg";
 		break;
 	    case 23:
-		pageSrc = "assets/Conflict/Con6.png";
+		pageSrc = "assets/Conflict/Con6.jpg";
 		break;
 	    case 24:
-		pageSrc = "assets/Climax_falling_conclu/CL1.png";
+		pageSrc = "assets/Climax_falling_conclu/CL1.jpg";
 		break;
 		case 25:
-		pageSrc = "assets/Climax_falling_conclu/CL2.png";
+		pageSrc = "assets/Climax_falling_conclu/CL2.jpg";
 		break;
 	    case 26:
-		pageSrc = "assets/Climax_falling_conclu/FAC1.png";
+		pageSrc = "assets/Climax_falling_conclu/FAC1.jpg";
 		break;
 		case 27:
-		pageSrc = "assets/Climax_falling_conclu/FAC2.png";
+		pageSrc = "assets/Climax_falling_conclu/FAC2.jpg";
 		break;
 	    case 28:
-		pageSrc = "assets/Climax_falling_conclu/CONCLU1.png";
+		pageSrc = "assets/Climax_falling_conclu/CONCLU1.jpg";
 		break;
 		case 29:
-		pageSrc = "assets/Climax_falling_conclu/CONCLU2.png";
+		pageSrc = "assets/Climax_falling_conclu/CONCLU2.0.jpg";
 		break;
 	    case 30:
-		pageSrc = "assets/Climax_falling_conclu/CONCLU2.png";
+		pageSrc = "assets/Climax_falling_conclu/CONCLU2.1.jpg";
 		break;
 		case 31:
-		pageSrc = "assets/Climax_falling_conclu/CONCLU2.png";
+		pageSrc = "assets/Climax_falling_conclu/CONCLU2.2.jpg";
 		break;
 	    case 32:
-		pageSrc = "assets/Climax_falling_conclu/CONCLU2.png";
+		pageSrc = "assets/Climax_falling_conclu/CONCLU2.3.jpg";
 		break;
 		case 33:
-		pageSrc = "assets/Climax_falling_conclu/CONCLU3.png";
+		pageSrc = "assets/Climax_falling_conclu/CONCLU3.jpg";
 		break;
 	}
     }
@@ -465,147 +465,147 @@ function getPageImage(prevInc){
 		// Left side of the Page
 	case 0:
 		// Intro Part
-	    return "assets/Intro/intro1.png";
+	    return "assets/Intro/intro1.jpg";
 	case 1:
-	    return "assets/Intro/intro2.png";
+	    return "assets/Intro/intro2.jpg";
 	case 2:
-	    return "assets/Intro/intro3.0.png";
+	    return "assets/Intro/intro3.0.jpg";
 	case 3:
-	    return "assets/Intro/intro4.png";
+	    return "assets/Intro/intro4.jpg";
 	case 4:
-	    return "assets/Intro/intro5.png";
+	    return "assets/Intro/intro5.jpg";
 	case 5:
-	    return "assets/Intro/intro6.png";
+	    return "assets/Intro/intro6.jpg";
 	case 6:
-	    return "assets/Intro/intro7.png";
+	    return "assets/Intro/intro7.jpg";
 	case 7:
 		// Exposition Part
-	    return "assets/Exposition/E1.png";
+	    return "assets/Exposition/E1.jpg";
 	case 8:
-	    return "assets/Exposition/E2.png";
+	    return "assets/Exposition/E2.jpg";
 	case 9:
-	    return "assets/Exposition/E3.png";
+	    return "assets/Exposition/E3.jpg";
 	case 10:
-	    return "assets/Exposition/E4.png";
+	    return "assets/Exposition/E4.jpg";
 	case 11:    
-	    return "assets/Exposition/E5.png";
+	    return "assets/Exposition/E5.jpg";
 	case 12:
 		// Rising Action Part
-	    return "assets/Exposition/E6.png";
+	    return "assets/Exposition/E6.jpg";
 	case 13:
-	    return "assets/Exposition/E7.png";
+	    return "assets/Exposition/E7.jpg";
 	case 14:
-	    return "assets/Rising_Action/RAC1.png";
+	    return "assets/Rising_Action/RAC1.jpg";
 	case 15:
-	    return "assets/Rising_Action/RAC2.png";
+	    return "assets/Rising_Action/RAC2.jpg";
 	case 16:
-	    return "assets/Rising_Action/RAC3.png";
+	    return "assets/Rising_Action/RAC3.jpg";
 	case 17:
-	    return "assets/Rising_Action/RAC4.png";
+	    return "assets/Rising_Action/RAC4.jpg";
 	case 18:
-	    return "assets/Conflict/Con1.png";
+	    return "assets/Conflict/Con1.jpg";
 	case 19:
-	    return "assets/Conflict/Con2.png";
+	    return "assets/Conflict/Con2.jpg";
 	case 20:
-	    return "assets/Conflict/Con3.png";
+	    return "assets/Conflict/Con3.jpg";
 	case 21:
-	    return "assets/Conflict/Con4.png";
+	    return "assets/Conflict/Con4.jpg";
 	case 22:
-	    return "assets/Conflict/Con5.png";
+	    return "assets/Conflict/Con5.jpg";
 	case 23:
-	    return "assets/Conflict/Con6.png";
+	    return "assets/Conflict/Con6.jpg";
 	case 24:
-	    return "assets/Climax_falling_conclu/CL1.png";
+	    return "assets/Climax_falling_conclu/CL1.jpg";
 	case 25:
-	    return "assets/Climax_falling_conclu/CL2.png";
+	    return "assets/Climax_falling_conclu/CL2.jpg";
 	case 26:
-	    return "assets/Climax_falling_conclu/FAC1.png";
+	    return "assets/Climax_falling_conclu/FAC1.jpg";
 	case 27:
-		return "assets/Climax_falling_conclu/FAC2.png";
+		return "assets/Climax_falling_conclu/FAC2.jpg";
 	case 28:
-		return "assets/Climax_falling_conclu/CONCLU1.png";
+		return "assets/Climax_falling_conclu/CONCLU1.jpg";
 	case 29:
-		return "assets/Climax_falling_conclu/CONCLU2.0.png";
+		return "assets/Climax_falling_conclu/CONCLU2.0.jpg";
 	case 30:
-		return "assets/Climax_falling_conclu/CONCLU2.1.png";
+		return "assets/Climax_falling_conclu/CONCLU2.1.jpg";
 	case 31:
-		return "assets/Climax_falling_conclu/CONCLU2.2.png";
+		return "assets/Climax_falling_conclu/CONCLU2.2.jpg";
 	case 32:
-		return "assets/Climax_falling_conclu/CONCLU2.3.png";
+		return "assets/Climax_falling_conclu/CONCLU2.3.jpg";
 	case 33:
-		return "assets/Climax_falling_conclu/CONCLU3.png";
+		return "assets/Climax_falling_conclu/CONCLU3.jpg";
 	}
     }
     switch(pageNumber-prevInc){
 		// Right Side of the Page
 	case 1:
-	    return "assets/Intro/panel1.png";
+	    return "assets/Intro/panel1.jpg";
 	case 2:
-	    return "assets/Intro/panel2.png";
+	    return "assets/Intro/panel2.jpg";
 	case 3:
-	    return "assets/Intro/panel3.png";
+	    return "assets/Intro/panel3.jpg";
 	case 4:
-	    return "assets/Intro/panel4.png";
+	    return "assets/Intro/panel4.jpg";
 	case 5:
-	    return "assets/Intro/panel5.png";
+	    return "assets/Intro/panel5.jpg";
 	case 6:
-	    return "assets/Intro/panel6.png";
+	    return "assets/Intro/panel6.jpg";
 	case 7:
-	    return "assets/Intro/panel7.png";
+	    return "assets/Intro/panel7.jpg";
 	case 8:
-	    return "assets/Exposition/Panel1.png";
+	    return "assets/Exposition/Panel1.jpg";
 	case 9:
-	    return "assets/Exposition/Panel2.png";
+	    return "assets/Exposition/Panel2.jpg";
 	case 10:
-	    return "assets/Exposition/Panel3.png";
+	    return "assets/Exposition/Panel3.jpg";
 	case 11:    
-	    return "assets/Exposition/Panel4.png";
+	    return "assets/Exposition/Panel4.jpg";
 	case 12:
-	    return "assets/Exposition/Panel5.png";
+	    return "assets/Exposition/Panel5.jpg";
 	case 13:
-	    return "assets/Exposition/Panel6.png";
+	    return "assets/Exposition/Panel6.jpg";
 	case 14:
-	    return "assets/Exposition/Panel7.png";
+	    return "assets/Exposition/Panel7.jpg";
 	case 15:
-	    return "assets/Rising_Action/TRAC1.png";
+	    return "assets/Rising_Action/TRAC1.jpg";
 	case 16:
-	    return "assets/Rising_Action/TRAC2.png";
+	    return "assets/Rising_Action/TRAC2.jpg";
 	case 17:
-	    return "assets/Rising_Action/TRAC3.png";
+	    return "assets/Rising_Action/TRAC3.jpg";
 	case 18:
-	    return "assets/Rising_Action/TRAC4.png";
+	    return "assets/Rising_Action/TRAC4.jpg";
 	case 19:
-	    return "assets/Conflict/tcon1.png";
+	    return "assets/Conflict/tcon1.jpg";
 	case 20:
-	    return "assets/Conflict/tcon2.png";
+	    return "assets/Conflict/tcon2.jpg";
 	case 21:
-	    return "assets/Conflict/tcon3.png";
+	    return "assets/Conflict/tcon3.jpg";
 	case 22:
-	    return "assets/Conflict/tcon4.png";
+	    return "assets/Conflict/tcon4.jpg";
 	case 23:
-	    return "assets/Conflict/tcon5.png";
+	    return "assets/Conflict/tcon5.jpg";
 	case 24:
-		return "assets/Conflict/tcon6.png";
+		return "assets/Conflict/tcon6.jpg";
 	case 25:
-		return "assets/Climax_falling_conclu/tcl1.png";
+		return "assets/Climax_falling_conclu/tcl1.jpg";
 	case 26:
-		return "assets/Climax_falling_conclu/tcl2.png";
+		return "assets/Climax_falling_conclu/tcl2.jpg";
 	case 27:
-		return "assets/Climax_falling_conclu/tfall1.png";
+		return "assets/Climax_falling_conclu/tfall1.jpg";
 	case 28:
-		return "assets/Climax_falling_conclu/tfall2.png";
+		return "assets/Climax_falling_conclu/tfall2.jpg";
 	case 29:
-		return "assets/Climax_falling_conclu/tconclu1.png";
+		return "assets/Climax_falling_conclu/tconclu1.jpg";
 	case 30:
-		return "assets/Climax_falling_conclu/tconclu2.0.png";
+		return "assets/Climax_falling_conclu/tconclu2.0.jpg";
 	case 31:
-		return "assets/Climax_falling_conclu/tconclu2.1.png";
+		return "assets/Climax_falling_conclu/tconclu2.1.jpg";
 	case 32:
-		return "assets/Climax_falling_conclu/tconclu2.2.png";
+		return "assets/Climax_falling_conclu/tconclu2.2.jpg";
 	case 33:
-		return "assets/Climax_falling_conclu/tconclu2.3.png";	
+		return "assets/Climax_falling_conclu/tconclu2.3.jpg";	
 	case 34:
-		return "assets/Climax_falling_conclu/tconclu3.png";
+		return "assets/Climax_falling_conclu/tconclu3.jpg";
     }
 }
 
