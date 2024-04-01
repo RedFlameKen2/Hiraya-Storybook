@@ -357,7 +357,7 @@ function changeImage(){
 		pageSrc = "assets/Intro/intro4.png";
 		break;
 	    case 4:
-		pageSrc = "assets/Intro/intro5.1.png";
+		pageSrc = "assets/Intro/intro5.png";
 		break;
 	    case 5:
 		pageSrc = "assets/Intro/intro6.png";
@@ -473,7 +473,7 @@ function getPageImage(prevInc){
 	case 3:
 	    return "assets/Intro/intro4.png";
 	case 4:
-	    return "assets/Intro/intro5.1.png";
+	    return "assets/Intro/intro5.png";
 	case 5:
 	    return "assets/Intro/intro6.png";
 	case 6:
